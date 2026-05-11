@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>ANIM CLOTHING — Define Your Style</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+     <div class="nav-inner">
+       <a href="#" class="logo">ANIM CLOTHING</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#hero" class="active">Home</a></li>
+        <li><a href="#categories">Categories</a></li>
+        <li><a href="#categories">Shop</a></li>
+        <li><a href="#story">Story</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="icon-btn" id="searchToggle" aria-label="Search"><i class="fas fa-search"></i></button>
+        <button class="icon-btn" id="wishlistToggle" aria-label="Wishlist"><i class="fas fa-heart"></i></button>
+        <button class="icon-btn" id="cartToggle" aria-label="Cart">
+          <i class="fas fa-shopping-bag"></i>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-overlay" id="mobileOverlay">
+    <ul class="mobile-links">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#categories">Categories</a></li>
+      <li><a href="#categories">Shop</a></li>
+      <li><a href="#story">Story</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <div class="hero-slider" id="heroSlider">
+        <div class="slide active" style="background-image: url('https://images.unsplash.com/photo-1523381210434-271e8be1f52b?w=1600&q=80')"></div>
+        <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1551028719-00167b16eac5?w=1600&q=80')"></div>
+        <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1593030761757-71fae45fa0e7?w=1600&q=80')"></div>
+        <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=1600&q=80')"></div>
+      </div>
+      <div class="hero-overlay"></div>
+      <div class="hero-slider-dots" id="sliderDots"></div>
+    </div>
+    <div class="hero-content">
+      <span class="hero-badge">New Collection 2026</span>
+      <h1 class="hero-title">
+        <span class="hero-line">Define Your</span>
+        <span class="hero-line accent">Style.</span>
+      </h1>
+      <p class="hero-desc">Premium Clothing crafted for those who dare to stand out. Explore our latest drops.</p>
+      <div class="hero-buttons">
+        <a href="#categories" class="btn btn-primary">Shop Now! <i class="fas fa-arrow-right"></i></a>
+        <a href="#story" class="btn btn-outline">Our Story</a>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Categories Section -->
+  <section class="section categories" id="categories">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Collections</span>
+        <h2 class="section-title">Shop by Category</h2>
+        <p class="section-desc">From oversized tees to tailored trousers — find your fit.</p>
+      </div>
+
+      <div class="category-tabs">
+        <button class="cat-tab active" data-cat="all">All</button>
+        <button class="cat-tab" data-cat="shirts">Shirts</button>
+        <button class="cat-tab" data-cat="pants">Pants</button>
+      </div>
+
+      <div class="category-grid" id="categoryGrid">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats / Features -->
+  <section class="section stats">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-card reveal">
+          <span class="stat-number" data-count="50">0</span>
+          <span class="stat-label">Premium Fabrics</span>
+        </div>
+        <div class="stat-card reveal">
+          <span class="stat-number" data-count="15">0</span>
+          <span class="stat-label">Design Awards</span>
+        </div>
+        <div class="stat-card reveal">
+          <span class="stat-number" data-count="25">0</span>
+          <span class="stat-label">Cities Worldwide</span>
+        </div>
+        <div class="stat-card reveal">
+          <span class="stat-number" data-count="99">0</span>
+          <span class="stat-label">Happy Clients (%)</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Story Section -->
+  <section class="section story" id="story">
+    <div class="container">
+      <div class="story-grid">
+         <div class="story-image reveal">
+           <img src="assets/images/story.jpg" alt="ANIM CLOTHING Story" onerror="this.onerror=null;this.src='assets/images/default-story.jpg'">
+         </div>
+        <div class="story-content reveal">
+          <span class="section-tag">Our Story</span>
+          <h2 class="section-title" style="text-align:left">Born from a passion for <span class="accent">self-expression</span></h2>
+          <p>Anim started on the streets, driven by a belief that what you wear is more than fabric — it's identity. We blend bold aesthetics with uncompromising quality, creating pieces that move with you.</p>
+          <div class="story-features">
+            <div class="story-feature">
+              <i class="fas fa-leaf"></i>
+              <span>Sustainable Materials</span>
+            </div>
+            <div class="story-feature">
+              <i class="fas fa-hand-holding-heart"></i>
+              <span>Ethical Production</span>
+            </div>
+            <div class="story-feature">
+              <i class="fas fa-truck"></i>
+              <span>Free Shipping</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="section newsletter" id="contact">
+    <div class="container">
+      <div class="newsletter-box reveal">
+        <span class="section-tag" style="color:#a3a3a3">Stay Connected</span>
+        <h2 class="section-title">Join the Anim Crew</h2>
+        <p>Be the first to know about exclusive drops, early access, and members-only pricing.</p>
+        <form class="newsletter-form" id="newsletterForm">
+          <div class="input-group">
+            <input type="email" placeholder="Enter your email" required />
+            <button type="submit" class="btn btn-primary">Subscribe</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="logo">ANIM CLOTHING</a>
+          <p>Defining streetwear culture, one stitch at a time.</p>
+          <div class="footer-social">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Shop</h4>
+          <a href="#">Oversized Tees</a>
+          <a href="#">Polo Shirts</a>
+          <a href="#">Denim Shirts</a>
+          <a href="#">Formal Shirts</a>
+          <a href="#">Cargo Pants</a>
+          <a href="#">Denim Jeans</a>
+          <a href="#">Trousers</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="#">About Us</a>
+          <a href="#">Careers</a>
+          <a href="#">Press</a>
+          <a href="#">Sustainability</a>
+        </div>
+        <div class="footer-col">
+          <h4>Support</h4>
+          <a href="#">FAQs</a>
+          <a href="#">Shipping</a>
+          <a href="#">Returns</a>
+          <a href="#">Size Guide</a>
+          <a href="#">Contact</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+         <p>&copy; 2026 ANIM CLOTHING. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Cart Sidebar -->
+  <div class="cart-sidebar" id="cartSidebar">
+    <div class="cart-header">
+      <h3>Your Cart <span id="cartItemCount">(0)</span></h3>
+      <button id="cartClose" aria-label="Close cart"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <div class="cart-empty">
+        <i class="fas fa-shopping-bag"></i>
+        <p>Your bag is empty</p>
+      </div>
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Total</span>
+        <span id="cartTotal">$0.00</span>
+      </div>
+      <button class="btn btn-primary checkout-btn">Checkout</button>
+    </div>
+  </div>
+  <div class="cart-overlay" id="cartOverlay"></div>
+
+  <!-- Wishlist Sidebar -->
+  <div class="cart-sidebar wishlist-sidebar" id="wishlistSidebar">
+    <div class="cart-header">
+      <h3>Wishlist <span id="wishlistCount">(0)</span></h3>
+      <button id="wishlistClose" aria-label="Close wishlist"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="cart-items" id="wishlistItems">
+      <div class="cart-empty">
+        <i class="fas fa-heart"></i>
+        <p>Your wishlist is empty</p>
+      </div>
+    </div>
+  </div>
+  <div class="cart-overlay" id="wishlistOverlay"></div>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast">
+    <i class="fas fa-check-circle"></i>
+    <span id="toastMessage">Item added to cart!</span>
+  </div>
+
+   <script src="js/data.js"></script>
+   <script src="js/cart.js"></script>
+   <script src="js/main.js"></script>
+   
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/923211156808?text=Hello%2C%20I%20am%20interested%20in%20your%20clothing%20collection" class="whatsapp-float" target="_blank">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+</body>
+</html>

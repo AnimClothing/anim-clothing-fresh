@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ANIM CLOTHING — Product</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/product.css" />
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="logo">ANIM CLOTHING</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html#hero">Home</a></li>
+        <li><a href="index.html#categories">Categories</a></li>
+        <li><a href="index.html#story">Story</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="icon-btn" id="searchToggle" aria-label="Search"><i class="fas fa-search"></i></button>
+        <button class="icon-btn" id="wishlistToggle" aria-label="Wishlist"><i class="fas fa-heart"></i></button>
+        <button class="icon-btn" id="cartToggle" aria-label="Cart">
+          <i class="fas fa-shopping-bag"></i>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-overlay" id="mobileOverlay">
+    <ul class="mobile-links">
+      <li><a href="index.html#hero">Home</a></li>
+      <li><a href="index.html#categories">Categories</a></li>
+      <li><a href="index.html#story">Story</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- Product Detail Section -->
+  <section class="section product-detail" id="productDetail">
+    <div class="container">
+      <div class="product-detail-content">
+        <!-- Product Image Gallery -->
+        <div class="product-gallery">
+          <div class="product-main-image">
+            <img src="assets/images/default.jpg" alt="Product Image" id="mainProductImage">
+          </div>
+          <div class="product-thumbnails">
+            <!-- Thumbnails will be populated by JS -->
+          </div>
+        </div>
+
+        <!-- Product Info -->
+        <div class="product-info">
+          <h1 class="product-title" id="productTitle">Product Name</h1>
+          <div class="product-description" id="productDescription">
+            Product description goes here.
+          </div>
+          <div class="product-price" id="productPrice">Rs. 0</div>
+
+          <!-- Color Options -->
+          <div class="product-options">
+            <div class="option-label">Color</div>
+            <div class="color-options" id="colorOptions">
+              <!-- Color swatches will be populated by JS -->
+            </div>
+          </div>
+
+          <!-- Size Options -->
+          <div class="product-options">
+            <div class="option-label">Size</div>
+            <div class="size-options" id="sizeOptions">
+              <!-- Size options will be populated by JS -->
+            </div>
+          </div>
+
+          <!-- Buttons -->
+          <div class="product-actions">
+            <button class="btn btn-primary add-to-cart-btn" id="addToCartBtn">
+              <i class="fas fa-shopping-bag"></i> Add to Cart
+            </button>
+            <button class="btn btn-outline buy-now-btn" id="buyNowBtn">
+              Buy Now
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Products Section -->
+  <section class="section related-products" id="relatedProducts">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">You May Also Like</span>
+        <h2 class="section-title">Related Products</h2>
+      </div>
+      <div class="related-products-grid" id="relatedProductsGrid">
+        <!-- Related products will be populated by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Cart / Wishlist Sidebars (same as other pages) -->
+  <div class="cart-sidebar" id="cartSidebar">
+    <div class="cart-header">
+      <h3>Your Cart <span id="cartItemCount">(0)</span></h3>
+      <button id="cartClose" aria-label="Close cart"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <div class="cart-empty">
+        <i class="fas fa-shopping-bag"></i>
+        <p>Your bag is empty</p>
+      </div>
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Total</span>
+        <span id="cartTotal">$0.00</span>
+      </div>
+      <button class="btn btn-primary checkout-btn">Checkout</button>
+    </div>
+  </div>
+  <div class="cart-overlay" id="cartOverlay"></div>
+
+  <div class="cart-sidebar wishlist-sidebar" id="wishlistSidebar">
+    <div class="cart-header">
+      <h3>Wishlist <span id="wishlistCount">(0)</span></h3>
+      <button id="wishlistClose" aria-label="Close wishlist"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="cart-items" id="wishlistItems">
+      <div class="cart-empty">
+        <i class="fas fa-heart"></i>
+        <p>Your wishlist is empty</p>
+      </div>
+    </div>
+  </div>
+  <div class="cart-overlay" id="wishlistOverlay"></div>
+
+  <!-- Toast -->
+  <div class="toast" id="toast">
+    <i class="fas fa-check-circle"></i>
+    <span id="toastMessage">Item added to cart!</span>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/product.js"></script>
+  
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/923211156808?text=Hello%2C%20I%20am%20interested%20in%20your%20clothing%20collection" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+</body>
+</html>
