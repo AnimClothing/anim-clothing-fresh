@@ -46,9 +46,16 @@
 
 /* --- Collection Grid --- */
 .collection-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 24px;
+   display: grid;
+   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+   gap: 24px;
+}
+
+/* Show 2 cards per row on mobile */
+@media (max-width: 768px) {
+   .collection-grid {
+      grid-template-columns: repeat(2, 1fr);
+   }
 }
 
 .collection-card {

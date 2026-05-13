@@ -171,6 +171,130 @@ function animateCounter(el, target) {
   }, 30);
 }
 
+// --- Reviews Slider ---
+function setupReviewsSlider() {
+  const reviewsTrack = document.querySelector('.reviews-track');
+  if (!reviewsTrack) return;
+
+  // Sample review data with Pakistani names
+  const reviews = [
+    {
+      name: "Ayesha Khan",
+      rating: 5,
+      text: "The quality of these oversized tees is incredible! Soft, durable, and true to size. Have bought 3 already and will definitely be back for more.",
+      date: "March 2026"
+    },
+    {
+      name: "Ahmed Malik",
+      rating: 4,
+      text: "Great fit and excellent material. The polo shirts hold their shape well after multiple washes. Customer service was also very helpful.",
+      date: "February 2026"
+    },
+    {
+      name: "Fatima Ali",
+      rating: 5,
+      text: "Love the denim jacket! Perfect weight for spring/fall layering. Gets compliments every time I wear it. Worth every penny.",
+      date: "January 2026"
+    },
+    {
+      name: "Bilal Hassan",
+      rating: 5,
+      text: "First time buying formal shirts online and I'm impressed. The fit is perfect and the fabric feels luxurious. Will be a repeat customer.",
+      date: "March 2026"
+    },
+    {
+      name: "Zara Ahmed",
+      rating: 4,
+      text: "The cargo pants are exactly what I was looking for - functional yet stylish. Plenty of pockets and comfortable for all-day wear.",
+      date: "February 2026"
+    },
+    {
+      name: "Omar Siddiqui",
+      rating: 5,
+      text: "Excellent quality across all products. The attention to detail in stitching and fabric selection is impressive. Highly recommend ANIM CLOTHING!",
+      date: "March 2026"
+    }
+  ];
+
+  // Create review cards
+  reviewsTrack.innerHTML = reviews.map((review, index) => `
+    <div class="review-card">
+      <div class="review-header">
+        <h3>${review.name}</h3>
+        <div class="review-rating">
+          ${'★'.repeat(review.rating)}${'☆'.repeat(5 - review.rating)}
+        </div>
+        <span class="review-date">${review.date}</span>
+      </div>
+      <p class="review-text">${review.text}</p>
+    </div>
+  `).join('');
+
+  // Auto-scroll functionality
+  let autoScrollInterval;
+  const scrollAmount = 300; // Approximate width of one card including gap
+  const scrollDelay = 5000; // 5 seconds between auto-scrolls
+  
+  const startAutoScroll = () => {
+    if (autoScrollInterval) clearInterval(autoScrollInterval);
+    autoScrollInterval = setInterval(() => {
+      // Scroll smoothly to the next position
+      reviewsTrack.scrollBy({
+        left: scrollAmount,
+        behavior: 'smooth'
+      });
+      
+      // Check if we've reached the end and reset to beginning
+      setTimeout(() => {
+        if (reviewsTrack.scrollLeft >= (reviewsTrack.scrollWidth - reviewsTrack.clientWidth)) {
+          // Smoothly scroll back to beginning
+          reviewsTrack.scrollTo({
+            left: 0,
+            behavior: 'smooth'
+          });
+        }
+      }, scrollDelay);
+    }, scrollDelay);
+  };
+  
+  // Pause auto-scroll when user interacts
+  const stopAutoScroll = () => {
+    if (autoScrollInterval) {
+      clearInterval(autoScrollInterval);
+      autoScrollInterval = null;
+    }
+  };
+  
+  // Restart auto-scroll after user interaction
+  const restartAutoScroll = () => {
+    stopAutoScroll();
+    // Wait a bit before restarting to let user finish their interaction
+    setTimeout(() => {
+      startAutoScroll();
+    }, 10000); // Wait 10 seconds before restarting auto-scroll
+  };
+  
+  // Start auto-scroll when user stops interacting for a while
+  let scrollTimeout;
+  
+  const onUserScroll = () => {
+    stopAutoScroll();
+    clearTimeout(scrollTimeout);
+    scrollTimeout = setTimeout(() => {
+      startAutoScroll();
+    }, 8000); // Restart auto-scroll after 8 seconds of inactivity
+  };
+  
+  // Add event listeners for user interaction
+  reviewsTrack.addEventListener('scroll', onUserScroll);
+  reviewsTrack.addEventListener('wheel', onUserScroll);
+  reviewsTrack.addEventListener('touchstart', onUserScroll);
+  reviewsTrack.addEventListener('mousedown', onUserScroll);
+  
+  // Start auto-scroll initially
+  startAutoScroll();
+}
+
 // --- Search Toggle ---
 const searchBtn = qs('#searchToggle');
 searchBtn?.addEventListener('click', () => showToast('Search coming soon!'));
@@ -188,6 +312,7 @@ function init() {
   setupNewsletter();
   setupScrollReveal();
   setupCounter();
+  setupReviewsSlider();
 }
 
 document.addEventListener('DOMContentLoaded', init);
