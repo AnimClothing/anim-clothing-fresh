@@ -1265,7 +1265,8 @@ ul { list-style: none; }
   .story-grid { grid-template-columns: 1fr; gap: 32px; }
   .story-features { grid-template-columns: 1fr 1fr; }
 
-  .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 24px; }
+  .footer-brand { grid-column: 1 / -1; }
   .footer-brand p { max-width: 100%; }
 
   .category-grid { grid-template-columns: repeat(2, 1fr); }
