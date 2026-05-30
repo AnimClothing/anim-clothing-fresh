@@ -2,7 +2,6 @@
    ANIM CLOTHING — Collection Page
    ============================================ */
 
-// Get params from URL
 const params = new URLSearchParams(window.location.search);
 const catId = params.get('cat');
 
@@ -10,7 +9,6 @@ let filteredProducts = [];
 
 function getFilteredProducts() {
   if (catId) {
-    // Filter by category
     return products.filter(p => p.category === catId);
   }
   return [];
@@ -27,14 +25,12 @@ function getPageTitle() {
   return { title: 'Collection', desc: '' };
 }
 
-// --- Render ---
 function renderCollection() {
   const info = getPageTitle();
   if (info.title === 'Collection') {
     document.title = 'ANIM — Collection Not Found';
   }
 
-  // Update hero text
   const tag = qs('#collTag');
   const title = qs('#collTitle');
   const desc = qs('#collDesc');
@@ -42,7 +38,6 @@ function renderCollection() {
   if (title) title.textContent = info.title;
   if (desc) desc.textContent = info.desc;
 
-  // Products
   const grid = qs('#collectionGrid');
   if (!grid) return;
 
@@ -59,34 +54,61 @@ function renderCollection() {
     return;
   }
 
-    grid.innerHTML = filteredProducts.map((p, i) => {
+    const comingSoonCats = ['cargo', 'denim-shirt', 'formal', 'jeans'];
+    const isComingSoon = comingSoonCats.includes(catId);
+
+    const shopifyProducts = {
+      trousers: { divId: 'product-component-1779559173010' },
+      tees: { divId: 'product-component-1779565271222' }
+    };
+    const hasShopify = shopifyProducts[catId];
+
+    let shopifyHtml = '';
+    if (hasShopify) {
+      shopifyHtml = `
+        <div class="collection-card-link shopify-card-wrapper" style="animation-delay:0ms; display: block; text-decoration: none;">
+          <div class="collection-card" style="padding:0; overflow:hidden; background:none; box-shadow:none;">
+            <div id="${hasShopify.divId}"></div>
+          </div>
+        </div>
+      `;
+    }
+
+    grid.innerHTML = shopifyHtml + filteredProducts.map((p, i) => {
+      const offset = hasShopify ? i + 1 : i;
       const inWishlist = wishlist.includes(p.id);
-      // Generate image path based on category and product ID
       const imagePath = `assets/images/${p.category}-${p.id}.jpg`;
       return `
-        <a href="product.html?id=${p.id}" class="collection-card-link" style="animation-delay:${i * 60}ms; display: block; text-decoration: none;">
+        <div class="collection-card-link" style="animation-delay:${offset * 60}ms; display: block; text-decoration: none; cursor:${isComingSoon ? 'default' : 'pointer'};">
           <div class="collection-card">
             <div class="collection-card-image">
+              ${isComingSoon ? '<span class="coming-soon-badge">Coming Soon</span>' : ''}
               <img src="${imagePath}" alt="${p.name}" onerror="this.src='assets/images/default.jpg'">
             </div>
             <div class="collection-card-body">
               <h3>${p.name}</h3>
               <span class="collection-card-price">Rs. ${p.price.toLocaleString('en-PK')}</span>
               <div class="collection-card-actions">
-                <button class="btn btn-primary add-cart-btn" data-id="${p.id}" onclick="event.stopPropagation(); addToCart(${p.id});">
-                  <i class="fas fa-shopping-bag"></i> Add to Cart
-                </button>
-                <button class="wishlist-btn ${inWishlist ? 'wishlisted' : ''}" data-id="${p.id}" onclick="event.stopPropagation(); toggleWishlist(${p.id});" aria-label="Wishlist">
-                  <i class="${inWishlist ? 'fas' : 'far'} fa-heart"></i>
-                </button>
+                ${isComingSoon
+                  ? '<button class="btn btn-primary coming-soon-btn" disabled><i class="fas fa-clock"></i> Coming Soon</button>'
+                  : `<button class="btn btn-primary add-cart-btn" data-id="${p.id}" onclick="event.stopPropagation(); addToCart(${p.id});">
+                      <i class="fas fa-shopping-bag"></i> Add to Cart
+                    </button>
+                    <button class="wishlist-btn ${inWishlist ? 'wishlisted' : ''}" data-id="${p.id}" onclick="event.stopPropagation(); toggleWishlist(${p.id});" aria-label="Wishlist">
+                      <i class="${inWishlist ? 'fas' : 'far'} fa-heart"></i>
+                    </button>`
+                }
               </div>
             </div>
           </div>
-        </a>
+        </div>
       `;
     }).join('');
 
-  // Attach events
+    if (hasShopify) {
+      loadShopifyBuyButton(catId);
+    }
+
   qsa('.add-cart-btn', grid).forEach(btn => {
     btn.addEventListener('click', (e) => {
       e.stopPropagation();
@@ -101,14 +123,301 @@ function renderCollection() {
   });
 }
 
-// --- Init ---
+function loadShopifyBuyButton(cat) {
+  var configs = {
+    trousers: {
+      divId: 'product-component-1779559173010',
+      productId: '9168699097314',
+      options: {
+  "product": {
+    "styles": {
+      "product": {
+        "@media (min-width: 601px)": {
+          "max-width": "calc(25% - 20px)",
+          "margin-left": "20px",
+          "margin-bottom": "50px"
+        }
+      },
+      "title": {
+        "font-family": "Big Caslon, serif",
+        "font-weight": "normal"
+      },
+      "price": {
+        "font-family": "Quantico, sans-serif",
+        "font-weight": "bold",
+        "font-size": "15px"
+      },
+      "compareAt": {
+        "font-family": "Quantico, sans-serif",
+        "font-weight": "bold",
+        "font-size": "12.75px"
+      },
+      "unitPrice": {
+        "font-family": "Quantico, sans-serif",
+        "font-weight": "bold",
+        "font-size": "12.75px"
+      }
+    },
+    "buttonDestination": "modal",
+    "contents": {
+      "options": false
+    },
+    "text": {
+      "button": "View product"
+    },
+    "googleFonts": [
+      "Quantico"
+    ]
+  },
+  "productSet": {
+    "styles": {
+      "products": {
+        "@media (min-width: 601px)": {
+          "margin-left": "-20px"
+        }
+      }
+    }
+  },
+  "modalProduct": {
+    "contents": {
+      "img": false,
+      "imgWithCarousel": true,
+      "button": false,
+      "buttonWithQuantity": true
+    },
+    "styles": {
+      "product": {
+        "@media (min-width: 601px)": {
+          "max-width": "100%",
+          "margin-left": "0px",
+          "margin-bottom": "0px"
+        }
+      },
+      "title": {
+        "font-family": "Helvetica Neue, sans-serif",
+        "font-weight": "bold",
+        "font-size": "26px",
+        "color": "#4c4c4c"
+      },
+      "price": {
+        "font-family": "Helvetica Neue, sans-serif",
+        "font-weight": "normal",
+        "font-size": "18px",
+        "color": "#4c4c4c"
+      },
+      "compareAt": {
+        "font-family": "Helvetica Neue, sans-serif",
+        "font-weight": "normal",
+        "font-size": "15.299999999999999px",
+        "color": "#4c4c4c"
+      },
+      "unitPrice": {
+        "font-family": "Helvetica Neue, sans-serif",
+        "font-weight": "normal",
+        "font-size": "15.299999999999999px",
+        "color": "#4c4c4c"
+      }
+    },
+    "text": {
+      "button": "Add to cart"
+    }
+  },
+  "option": {},
+  "cart": {
+    "text": {
+      "total": "Subtotal",
+      "button": "Checkout"
+    }
+  },
+  "toggle": {}
+}
+    },
+    tees: {
+      divId: 'product-component-1779565271222',
+      productId: '9171510624482',
+      options: {
+  "product": {
+    "styles": {
+      "product": {
+        "@media (min-width: 601px)": {
+          "max-width": "calc(25% - 20px)",
+          "margin-left": "20px",
+          "margin-bottom": "50px"
+        }
+      },
+      "title": {
+        "font-family": "Karla, sans-serif"
+      },
+      "button": {
+        ":hover": {
+          "background-color": "#032b0a"
+        },
+        "background-color": "#021906",
+        ":focus": {
+          "background-color": "#032b0a"
+        },
+        "border-radius": "15px"
+      },
+      "price": {
+        "font-family": "Lora, serif"
+      },
+      "compareAt": {
+        "font-family": "Lora, serif"
+      },
+      "unitPrice": {
+        "font-family": "Lora, serif"
+      }
+    },
+    "text": {
+      "button": "Add to cart"
+    },
+    "googleFonts": [
+      "Karla",
+      "Lora"
+    ]
+  },
+  "productSet": {
+    "styles": {
+      "products": {
+        "@media (min-width: 601px)": {
+          "margin-left": "-20px"
+        }
+      }
+    }
+  },
+  "modalProduct": {
+    "contents": {
+      "img": false,
+      "imgWithCarousel": true,
+      "button": false,
+      "buttonWithQuantity": true
+    },
+    "styles": {
+      "product": {
+        "@media (min-width: 601px)": {
+          "max-width": "100%",
+          "margin-left": "0px",
+          "margin-bottom": "0px"
+        }
+      },
+      "button": {
+        ":hover": {
+          "background-color": "#032b0a"
+        },
+        "background-color": "#021906",
+        ":focus": {
+          "background-color": "#032b0a"
+        },
+        "border-radius": "15px"
+      },
+      "title": {
+        "font-family": "Helvetica Neue, sans-serif",
+        "font-weight": "bold",
+        "font-size": "26px",
+        "color": "#4c4c4c"
+      },
+      "price": {
+        "font-family": "Helvetica Neue, sans-serif",
+        "font-weight": "normal",
+        "font-size": "18px",
+        "color": "#4c4c4c"
+      },
+      "compareAt": {
+        "font-family": "Helvetica Neue, sans-serif",
+        "font-weight": "normal",
+        "font-size": "15.299999999999999px",
+        "color": "#4c4c4c"
+      },
+      "unitPrice": {
+        "font-family": "Helvetica Neue, sans-serif",
+        "font-weight": "normal",
+        "font-size": "15.299999999999999px",
+        "color": "#4c4c4c"
+      }
+    },
+    "text": {
+      "button": "Add to cart"
+    }
+  },
+  "option": {},
+  "cart": {
+    "styles": {
+      "button": {
+        ":hover": {
+          "background-color": "#032b0a"
+        },
+        "background-color": "#021906",
+        ":focus": {
+          "background-color": "#032b0a"
+        },
+        "border-radius": "15px"
+      }
+    },
+    "text": {
+      "total": "Subtotal",
+      "button": "Checkout"
+    },
+    "popup": false
+  },
+  "toggle": {
+    "styles": {
+      "toggle": {
+        "background-color": "#021906",
+        ":hover": {
+          "background-color": "#032b0a"
+        },
+        ":focus": {
+          "background-color": "#032b0a"
+        }
+      }
+    }
+  }
+}
+    }
+  };
+
+  var config = configs[cat];
+  if (!config) return;
+
+  var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
+  if (window.ShopifyBuy) {
+    if (window.ShopifyBuy.UI) {
+      shopifyInit();
+    } else {
+      loadScript();
+    }
+  } else {
+    loadScript();
+  }
+  function loadScript() {
+    var script = document.createElement('script');
+    script.async = true;
+    script.src = scriptURL;
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
+    script.onload = shopifyInit;
+  }
+  function shopifyInit() {
+    var client = ShopifyBuy.buildClient({
+      domain: 'zhq0v0-vg.myshopify.com',
+      storefrontAccessToken: 'b8aa981fe82ef31a636e9bbd917363d6',
+    });
+    ShopifyBuy.UI.onReady(client).then(function (ui) {
+      ui.createComponent('product', {
+        id: config.productId,
+        node: document.getElementById(config.divId),
+        moneyFormat: 'Rs.%7B%7Bamount%7D%7D',
+        options: config.options
+      });
+    });
+  }
+}
+
 function init() {
   renderCollection();
   updateCartUI();
   updateWishlistUI();
   setupSharedSidebars();
 
-  // Navbar scroll
   const nav = qs('#navbar');
   window.addEventListener('scroll', () => {
     nav?.classList.toggle('scrolled', window.scrollY > 40);

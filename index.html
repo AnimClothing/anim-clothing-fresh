@@ -11,6 +11,14 @@
 </head>
 <body>
 
+  <!-- Announcement Bar -->
+  <div class="announcement-bar">
+    <div class="announcement-content">
+      <span class="announcement-text">Free Delivery All Across Pakistan</span>
+      <span class="announcement-emoji">🚚</span>
+    </div>
+  </div>
+
   <!-- Navigation -->
   <nav class="navbar" id="navbar">
      <div class="nav-inner">
@@ -163,6 +171,100 @@
     </div>
   </section>
 
+  <!-- Return & Refund Policy -->
+  <section class="section policy-section policy-collapsed" id="returns">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Return &amp; Refund Policy</h2>
+        <button class="policy-close" onclick="togglePolicy('returns')" aria-label="Close"><i class="fas fa-times"></i></button>
+      </div>
+      <div class="policy-content">
+        <p>At ANIM Clothing, customer satisfaction is our priority. If you are not fully satisfied with your purchase, you may request a return or exchange under the following conditions:</p>
+
+        <h3>Returns</h3>
+        <p>We offer a <strong>3-day return policy</strong>, which means you have 3 days after receiving your item to request a return.</p>
+        <p>To be eligible for a return:</p>
+        <ul>
+          <li>Item must be unused, unworn, and in original condition</li>
+          <li>Tags and packaging must be intact</li>
+          <li>Proof of purchase (order number or receipt) is required</li>
+        </ul>
+        <p><strong>Non-Returnable Items:</strong></p>
+        <ul>
+          <li>Sale or discounted items</li>
+          <li>Customized or made-to-order products</li>
+        </ul>
+
+        <h3>Exchanges</h3>
+        <p>We only replace items if:</p>
+        <ul>
+          <li>You received the wrong item</li>
+          <li>The item is defective</li>
+          <li>You need a size exchange (subject to availability)</li>
+        </ul>
+
+        <h3>Return Process</h3>
+        <p>To start a return or exchange:</p>
+        <ul>
+          <li>Email us at: <a href="mailto:animclothing.official@gmail.com">animclothing.official@gmail.com</a></li>
+          <li>Call / WhatsApp: <a href="tel:0321-1156808">0321-1156808</a></li>
+          <li>Provide your order number and reason for return</li>
+        </ul>
+        <p>Our team will guide you through the next steps.</p>
+
+        <h3>Refunds</h3>
+        <p>Once we receive and inspect your return, we will notify you. If approved, your refund will be processed within <strong>5–7 working days</strong>.</p>
+        <p>Refunds are issued via <strong>Bank Transfer / JazzCash / EasyPaisa</strong>.</p>
+
+        <h3>Shipping Costs</h3>
+        <p>Customers are responsible for return shipping costs. Shipping charges are non-refundable. If the item is defective or incorrect, we will cover the return cost.</p>
+
+        <h3>Contact Information</h3>
+        <p>
+          ANIM Clothing<br>
+          Land Mark Plaza, Jail Road, Shop # 56 Lahore 54000, Pakistan<br>
+          Email: <a href="mailto:animclothing.official@gmail.com">animclothing.official@gmail.com</a><br>
+          Phone: <a href="tel:0321-1156808">0321-1156808</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Shipping Policy -->
+  <section class="section policy-section policy-collapsed" id="shipping">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Shipping Policy</h2>
+        <button class="policy-close" onclick="togglePolicy('shipping')" aria-label="Close"><i class="fas fa-times"></i></button>
+      </div>
+      <div class="policy-content">
+        <p>At Anim Clothing, we are committed to delivering your orders quickly and efficiently.</p>
+
+        <h3>Order Processing</h3>
+        <p>All orders are processed within <strong>24 hours</strong> of confirmation. Orders placed on weekends or public holidays will be processed on the next working day.</p>
+
+        <h3>Delivery Time Frames</h3>
+        <ul>
+          <li><strong>Same City Delivery:</strong> Orders within the same city are delivered within 24 to 48 hours.</li>
+          <li><strong>Other Cities &amp; Provinces:</strong> Orders shipped to other cities and provinces are delivered within 3 to 5 business days.</li>
+        </ul>
+
+        <h3>Shipping Charges</h3>
+        <p>Shipping charges, if applicable, will be calculated and displayed at checkout.</p>
+
+        <h3>Order Tracking</h3>
+        <p>Once your order has been dispatched, you will receive a tracking number via email or SMS to monitor your shipment status.</p>
+
+        <h3>Delivery Delays</h3>
+        <p>While we strive to meet the stated delivery timelines, delays may occur due to unforeseen circumstances such as weather conditions, public holidays, or courier service issues.</p>
+
+        <h3>Contact Us</h3>
+        <p>For any shipping-related queries, please contact our customer support team at <a href="tel:0321-1156808">0321-1156808</a>.</p>
+        <p>Thank you for shopping with Anim Clothing!</p>
+      </div>
+    </div>
+  </section>
+
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
@@ -171,9 +273,9 @@
           <a href="#" class="logo">ANIM CLOTHING</a>
           <p>Defining streetwear culture, one stitch at a time.</p>
           <div class="footer-social">
-            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.instagram.com/animclothing.official/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/AnimClothing.Offical" target="_blank"><i class="fab fa-facebook"></i></a>
             <a href="#"><i class="fab fa-tiktok"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
             <a href="#"><i class="fab fa-youtube"></i></a>
           </div>
         </div>
@@ -197,8 +299,8 @@
          <div class="footer-col">
            <h4>Support</h4>
            <a href="#">FAQs</a>
-           <a href="#">Shipping</a>
-           <a href="#">Returns</a>
+           <a href="#" onclick="togglePolicy('shipping'); return false;">Shipping</a>
+           <a href="#" onclick="togglePolicy('returns'); return false;">Returns</a>
            <a href="#">Size Guide</a>
            <a href="#">Contact</a>
          </div>
@@ -206,7 +308,7 @@
             <h4>Contact Us</h4>
             <p><i class="fas fa-envelope"></i> contact@animclothing.com</p>
             <p><i class="fas fa-phone"></i> +92 321-1156808</p>
-            <p><i class="fas fa-map-marker-alt"></i> 123 Fashion Street, Karachi, Pakistan</p>
+            <p><i class="fas fa-map-marker-alt"></i> 14-UGF, Landmark plaza, Jail Rd, Gulberg III, Lahore, 54000</p>
           </div>
        </div>
        <div class="footer-bottom">
@@ -262,6 +364,11 @@
    <script src="js/cart.js"></script>
    <script src="js/main.js"></script>
    
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
     <!-- Floating WhatsApp Button -->
     <a href="https://wa.me/923211156808?text=Hello%2C%20I%20am%20interested%20in%20your%20clothing%20collection" class="whatsapp-float" target="_blank">
       <i class="fab fa-whatsapp"></i>

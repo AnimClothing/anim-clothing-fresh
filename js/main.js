@@ -313,6 +313,33 @@ function init() {
   setupScrollReveal();
   setupCounter();
   setupReviewsSlider();
+  setupBackToTop();
+}
+
+function togglePolicy(id) {
+  const section = document.getElementById(id);
+  if (!section) return;
+  section.classList.toggle('policy-collapsed');
+  if (!section.classList.contains('policy-collapsed')) {
+    section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+}
+
+function setupBackToTop() {
+  const btn = qs('#backToTop');
+  if (!btn) return;
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 400) {
+      btn.classList.add('visible');
+    } else {
+      btn.classList.remove('visible');
+    }
+  }, { passive: true });
+
+  btn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
 }
 
 document.addEventListener('DOMContentLoaded', init);

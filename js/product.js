@@ -274,6 +274,24 @@ function initSharedComponents() {
   setupCounter();
   updateCartUI();
   updateWishlistUI();
+  setupBackToTop();
+}
+
+function setupBackToTop() {
+  const btn = document.getElementById('backToTop');
+  if (!btn) return;
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 400) {
+      btn.classList.add('visible');
+    } else {
+      btn.classList.remove('visible');
+    }
+  }, { passive: true });
+
+  btn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
 }
 
 // Helper functions (copied from main.js for independence)

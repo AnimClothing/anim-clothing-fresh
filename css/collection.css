@@ -9,7 +9,7 @@
   align-items: center;
   justify-content: center;
   position: relative;
-  padding: var(--nav-height) 24px 40px;
+   padding: calc(var(--nav-height) + var(--announce-height)) 24px 40px;
   overflow: hidden;
 }
 
@@ -276,6 +276,37 @@
   border-color: var(--accent);
   color: var(--accent);
   background: rgba(249,115,22,.08);
+}
+
+/* --- Coming Soon Badge --- */
+.coming-soon-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 3;
+  background: var(--accent);
+  color: #fff;
+  font-size: .65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 5px 12px;
+  border-radius: var(--radius-full);
+  pointer-events: none;
+}
+
+.coming-soon-btn {
+  background: var(--text-dim) !important;
+  box-shadow: none !important;
+  cursor: not-allowed !important;
+  opacity: .7;
+  pointer-events: none;
+}
+
+/* --- Shopify Buy Button wrapper --- */
+.shopify-card-wrapper .collection-card:hover {
+  transform: none;
+  box-shadow: none;
 }
 
 /* --- Responsive --- */

@@ -4,7 +4,7 @@
 
 /* --- Product Detail Section --- */
 .product-detail {
-   padding: var(--nav-height) 24px 40px;
+   padding: calc(var(--nav-height) + var(--announce-height)) 24px 40px;
 }
 
 .product-detail-content {
@@ -294,7 +294,7 @@
 
 @media (max-width: 768px) {
    .product-detail {
-      padding: var(--nav-height) 16px 32px;
+      padding: calc(var(--nav-height) + var(--announce-height)) 16px 32px;
    }
    
    .product-main-image {

@@ -25,6 +25,7 @@
   --radius-full: 9999px;
   --shadow: 0 4px 30px rgba(0,0,0,.3);
   --nav-height: 72px;
+  --announce-height: 32px;
   --ease: cubic-bezier(.16,1,.3,1);
   --ease-out: cubic-bezier(0,0,.2,1);
 }
@@ -103,10 +104,49 @@ ul { list-style: none; }
 
 .accent { color: var(--accent); }
 
+/* --- Announcement Bar --- */
+.announcement-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--announce-height);
+  background: linear-gradient(135deg, #d97706, #ea580c);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.announcement-content {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.announcement-text {
+  font-size: .72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #fff;
+}
+
+.announcement-emoji {
+  font-size: .8rem;
+  animation: truckBounce 1.5s ease-in-out infinite;
+}
+
+@keyframes truckBounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-2px); }
+}
+
 /* --- Navigation --- */
 .navbar {
    position: fixed;
-   top: 0;
+   top: var(--announce-height);
    left: 0;
    right: 0;
    height: var(--nav-height);
@@ -285,7 +325,7 @@ ul { list-style: none; }
   align-items: center;
   position: relative;
   overflow: hidden;
-  padding: var(--nav-height) 24px 60px;
+   padding: calc(var(--nav-height) + var(--announce-height)) 24px 60px;
 }
 
 .hero-bg {
@@ -1004,6 +1044,91 @@ ul { list-style: none; }
   color: var(--text-dim);
 }
 
+/* --- Policy Section --- */
+.policy-section {
+  background: var(--bg);
+  border-top: 1px solid var(--border);
+  overflow: hidden;
+  max-height: 2000px;
+  transition: max-height .5s ease, padding .4s ease, border .4s ease;
+}
+
+.policy-section.policy-collapsed {
+  max-height: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  border-top: none;
+}
+
+.policy-section .section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.policy-close {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text-dim);
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  font-size: .85rem;
+  transition: all .3s ease;
+  flex-shrink: 0;
+}
+
+.policy-close:hover {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+
+.policy-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.policy-content h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 32px 0 12px;
+  color: var(--text);
+}
+
+.policy-content p {
+  color: var(--text-muted);
+  font-size: .95rem;
+  line-height: 1.7;
+  margin-bottom: 12px;
+}
+
+.policy-content ul {
+  margin: 0 0 16px;
+  padding-left: 24px;
+}
+
+.policy-content li {
+  color: var(--text-muted);
+  font-size: .95rem;
+  line-height: 1.7;
+  margin-bottom: 4px;
+}
+
+.policy-content a {
+  color: var(--accent);
+}
+
+.policy-content a:hover {
+  text-decoration: underline;
+}
+
 /* --- Cart Sidebar --- */
 .cart-sidebar {
   position: fixed;
@@ -1258,7 +1383,7 @@ ul { list-style: none; }
   .hamburger { display: flex; }
 
   .section { padding: 64px 0; }
-  .hero { padding: 0 24px 40px; }
+  .hero { padding: var(--announce-height) 24px 40px; }
   .hero-title { font-size: clamp(2.5rem, 15vw, 4.5rem); letter-spacing: -2px; }
   .hero-desc { font-size: 1rem; }
 
@@ -1279,6 +1404,45 @@ ul { list-style: none; }
   .stats-grid { grid-template-columns: 1fr; }
   .story-features { grid-template-columns: 1fr; }
    .cart-sidebar { width: 100vw; }
+}
+
+/* Back to Top Button */
+.back-to-top {
+  position: fixed;
+  bottom: 90px;
+  right: 24px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+  z-index: 99;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(12px);
+  transition: all .3s ease;
+  box-shadow: 0 4px 16px rgba(249,115,22,.3);
+  display: grid;
+  place-items: center;
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.back-to-top:hover {
+  background: var(--accent-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(249,115,22,.4);
+}
+
+.back-to-top.visible:hover {
+  transform: translateY(-2px);
 }
 
 /* Floating WhatsApp Button */
