@@ -140,22 +140,39 @@ function loadShopifyBuyButton(cat) {
       },
       "title": {
         "font-family": "Big Caslon, serif",
-        "font-weight": "normal"
+        "font-weight": "normal",
+        "color": "#ffffff"
       },
       "price": {
         "font-family": "Quantico, sans-serif",
         "font-weight": "bold",
-        "font-size": "15px"
+        "font-size": "15px",
+        "color": "#f97316"
       },
       "compareAt": {
         "font-family": "Quantico, sans-serif",
         "font-weight": "bold",
-        "font-size": "12.75px"
+        "font-size": "12.75px",
+        "color": "#888"
       },
       "unitPrice": {
         "font-family": "Quantico, sans-serif",
         "font-weight": "bold",
-        "font-size": "12.75px"
+        "font-size": "12.75px",
+        "color": "#888"
+      },
+      "button": {
+        ":hover": {
+          "background-color": "#ea580c"
+        },
+        "background-color": "#f97316",
+        ":focus": {
+          "background-color": "#ea580c"
+        },
+        "border-radius": "8px",
+        "font-family": "Inter, sans-serif",
+        "font-weight": "600",
+        "letter-spacing": "0.5px"
       }
     },
     "buttonDestination": "modal",
@@ -166,7 +183,8 @@ function loadShopifyBuyButton(cat) {
       "button": "View product"
     },
     "googleFonts": [
-      "Quantico"
+      "Quantico",
+      "Inter"
     ]
   },
   "productSet": {
@@ -194,42 +212,114 @@ function loadShopifyBuyButton(cat) {
         }
       },
       "title": {
-        "font-family": "Helvetica Neue, sans-serif",
-        "font-weight": "bold",
-        "font-size": "26px",
-        "color": "#4c4c4c"
+        "font-family": "Inter, sans-serif",
+        "font-weight": "700",
+        "font-size": "24px",
+        "color": "#ffffff"
       },
       "price": {
-        "font-family": "Helvetica Neue, sans-serif",
-        "font-weight": "normal",
-        "font-size": "18px",
-        "color": "#4c4c4c"
+        "font-family": "Inter, sans-serif",
+        "font-weight": "600",
+        "font-size": "20px",
+        "color": "#f97316"
       },
       "compareAt": {
-        "font-family": "Helvetica Neue, sans-serif",
-        "font-weight": "normal",
-        "font-size": "15.299999999999999px",
-        "color": "#4c4c4c"
+        "font-family": "Inter, sans-serif",
+        "font-weight": "400",
+        "font-size": "16px",
+        "color": "#888"
       },
       "unitPrice": {
-        "font-family": "Helvetica Neue, sans-serif",
-        "font-weight": "normal",
-        "font-size": "15.299999999999999px",
-        "color": "#4c4c4c"
+        "font-family": "Inter, sans-serif",
+        "font-weight": "400",
+        "font-size": "14px",
+        "color": "#888"
+      },
+      "button": {
+        ":hover": {
+          "background-color": "#ea580c"
+        },
+        "background-color": "#f97316",
+        ":focus": {
+          "background-color": "#ea580c"
+        },
+        "border-radius": "8px",
+        "font-family": "Inter, sans-serif",
+        "font-weight": "600",
+        "letter-spacing": "0.5px",
+        "text-transform": "uppercase"
+      },
+      "description": {
+        "font-family": "Inter, sans-serif",
+        "color": "#cccccc",
+        "font-size": "14px"
       }
     },
     "text": {
       "button": "Add to cart"
     }
   },
-  "option": {},
+  "option": {
+    "styles": {
+      "label": {
+        "font-family": "Inter, sans-serif",
+        "color": "#ffffff",
+        "font-weight": "600",
+        "font-size": "13px",
+        "text-transform": "uppercase",
+        "letter-spacing": "0.5px"
+      },
+      "select": {
+        "font-family": "Inter, sans-serif",
+        "background-color": "#1a1a1a",
+        "color": "#ffffff",
+        "border": "1px solid #333",
+        "border-radius": "6px",
+        "padding": "10px 14px"
+      }
+    }
+  },
   "cart": {
+    "styles": {
+      "button": {
+        ":hover": {
+          "background-color": "#ea580c"
+        },
+        "background-color": "#f97316",
+        ":focus": {
+          "background-color": "#ea580c"
+        },
+        "border-radius": "8px",
+        "font-family": "Inter, sans-serif",
+        "font-weight": "600",
+        "letter-spacing": "0.5px"
+      }
+    },
     "text": {
       "total": "Subtotal",
       "button": "Checkout"
     }
   },
-  "toggle": {}
+  "toggle": {
+    "styles": {
+      "toggle": {
+        "font-family": "Inter, sans-serif",
+        "background-color": "#f97316",
+        ":hover": {
+          "background-color": "#ea580c"
+        },
+        ":focus": {
+          "background-color": "#ea580c"
+        },
+        "border-radius": "50%"
+      },
+      "count": {
+        "font-family": "Inter, sans-serif",
+        "color": "#ffffff",
+        "font-weight": "700"
+      }
+    }
+  }
 }
     },
     tees: {
@@ -246,34 +336,52 @@ function loadShopifyBuyButton(cat) {
         }
       },
       "title": {
-        "font-family": "Karla, sans-serif"
+        "font-family": "Big Caslon, serif",
+        "font-weight": "normal",
+        "color": "#ffffff"
+      },
+      "price": {
+        "font-family": "Quantico, sans-serif",
+        "font-weight": "bold",
+        "font-size": "15px",
+        "color": "#f97316"
+      },
+      "compareAt": {
+        "font-family": "Quantico, sans-serif",
+        "font-weight": "bold",
+        "font-size": "12.75px",
+        "color": "#888"
+      },
+      "unitPrice": {
+        "font-family": "Quantico, sans-serif",
+        "font-weight": "bold",
+        "font-size": "12.75px",
+        "color": "#888"
       },
       "button": {
         ":hover": {
-          "background-color": "#032b0a"
+          "background-color": "#ea580c"
         },
-        "background-color": "#021906",
+        "background-color": "#f97316",
         ":focus": {
-          "background-color": "#032b0a"
+          "background-color": "#ea580c"
         },
-        "border-radius": "15px"
-      },
-      "price": {
-        "font-family": "Lora, serif"
-      },
-      "compareAt": {
-        "font-family": "Lora, serif"
-      },
-      "unitPrice": {
-        "font-family": "Lora, serif"
+        "border-radius": "8px",
+        "font-family": "Inter, sans-serif",
+        "font-weight": "600",
+        "letter-spacing": "0.5px"
       }
     },
+    "buttonDestination": "modal",
+    "contents": {
+      "options": false
+    },
     "text": {
-      "button": "Add to cart"
+      "button": "View product"
     },
     "googleFonts": [
-      "Karla",
-      "Lora"
+      "Quantico",
+      "Inter"
     ]
   },
   "productSet": {
@@ -300,75 +408,112 @@ function loadShopifyBuyButton(cat) {
           "margin-bottom": "0px"
         }
       },
-      "button": {
-        ":hover": {
-          "background-color": "#032b0a"
-        },
-        "background-color": "#021906",
-        ":focus": {
-          "background-color": "#032b0a"
-        },
-        "border-radius": "15px"
-      },
       "title": {
-        "font-family": "Helvetica Neue, sans-serif",
-        "font-weight": "bold",
-        "font-size": "26px",
-        "color": "#4c4c4c"
+        "font-family": "Inter, sans-serif",
+        "font-weight": "700",
+        "font-size": "24px",
+        "color": "#ffffff"
       },
       "price": {
-        "font-family": "Helvetica Neue, sans-serif",
-        "font-weight": "normal",
-        "font-size": "18px",
-        "color": "#4c4c4c"
+        "font-family": "Inter, sans-serif",
+        "font-weight": "600",
+        "font-size": "20px",
+        "color": "#f97316"
       },
       "compareAt": {
-        "font-family": "Helvetica Neue, sans-serif",
-        "font-weight": "normal",
-        "font-size": "15.299999999999999px",
-        "color": "#4c4c4c"
+        "font-family": "Inter, sans-serif",
+        "font-weight": "400",
+        "font-size": "16px",
+        "color": "#888"
       },
       "unitPrice": {
-        "font-family": "Helvetica Neue, sans-serif",
-        "font-weight": "normal",
-        "font-size": "15.299999999999999px",
-        "color": "#4c4c4c"
+        "font-family": "Inter, sans-serif",
+        "font-weight": "400",
+        "font-size": "14px",
+        "color": "#888"
+      },
+      "button": {
+        ":hover": {
+          "background-color": "#ea580c"
+        },
+        "background-color": "#f97316",
+        ":focus": {
+          "background-color": "#ea580c"
+        },
+        "border-radius": "8px",
+        "font-family": "Inter, sans-serif",
+        "font-weight": "600",
+        "letter-spacing": "0.5px",
+        "text-transform": "uppercase"
+      },
+      "description": {
+        "font-family": "Inter, sans-serif",
+        "color": "#cccccc",
+        "font-size": "14px"
       }
     },
     "text": {
       "button": "Add to cart"
     }
   },
-  "option": {},
+  "option": {
+    "styles": {
+      "label": {
+        "font-family": "Inter, sans-serif",
+        "color": "#ffffff",
+        "font-weight": "600",
+        "font-size": "13px",
+        "text-transform": "uppercase",
+        "letter-spacing": "0.5px"
+      },
+      "select": {
+        "font-family": "Inter, sans-serif",
+        "background-color": "#1a1a1a",
+        "color": "#ffffff",
+        "border": "1px solid #333",
+        "border-radius": "6px",
+        "padding": "10px 14px"
+      }
+    }
+  },
   "cart": {
     "styles": {
       "button": {
         ":hover": {
-          "background-color": "#032b0a"
+          "background-color": "#ea580c"
         },
-        "background-color": "#021906",
+        "background-color": "#f97316",
         ":focus": {
-          "background-color": "#032b0a"
+          "background-color": "#ea580c"
         },
-        "border-radius": "15px"
+        "border-radius": "8px",
+        "font-family": "Inter, sans-serif",
+        "font-weight": "600",
+        "letter-spacing": "0.5px"
       }
     },
     "text": {
       "total": "Subtotal",
       "button": "Checkout"
-    },
-    "popup": false
+    }
   },
   "toggle": {
     "styles": {
       "toggle": {
-        "background-color": "#021906",
+        "font-family": "Inter, sans-serif",
+        "background-color": "#f97316",
         ":hover": {
-          "background-color": "#032b0a"
+          "background-color": "#ea580c"
         },
         ":focus": {
-          "background-color": "#032b0a"
-        }
+          "background-color": "#ea580c"
+        },
+        "border-radius": "50%"
+      },
+      "count": {
+        "font-family": "Inter, sans-serif",
+        "color": "#ffffff",
+        "font-weight": "700"
       }
     }
   }
