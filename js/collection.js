@@ -550,17 +550,16 @@ function loadShopifyBuyButton(cat) {
         "font-family": "Karla, sans-serif"
       },
       "button": {
-        "font-family": "Inter, sans-serif",
-        "font-weight": "600",
-        "letter-spacing": "0.5px",
-        "border-radius": "8px",
-        "background-color": "#f97316",
+        "font-family": "Open Sans, sans-serif",
+        "font-weight": "bold",
         ":hover": {
-          "background-color": "#ea580c"
+          "background-color": "#302727"
         },
+        "background-color": "#1c1717",
         ":focus": {
-          "background-color": "#ea580c"
-        }
+          "background-color": "#302727"
+        },
+        "border-radius": "25px"
       },
       "price": {
         "font-family": "Lora, serif"
@@ -582,7 +581,7 @@ function loadShopifyBuyButton(cat) {
     "googleFonts": [
       "Karla",
       "Lora",
-      "Inter"
+      "Open Sans"
     ]
   },
   "productSet": {
@@ -610,17 +609,16 @@ function loadShopifyBuyButton(cat) {
         }
       },
       "button": {
-        "font-family": "Inter, sans-serif",
-        "font-weight": "600",
-        "letter-spacing": "0.5px",
-        "border-radius": "8px",
-        "background-color": "#f97316",
+        "font-family": "Open Sans, sans-serif",
+        "font-weight": "bold",
         ":hover": {
-          "background-color": "#ea580c"
+          "background-color": "#302727"
         },
+        "background-color": "#1c1717",
         ":focus": {
-          "background-color": "#ea580c"
-        }
+          "background-color": "#302727"
+        },
+        "border-radius": "25px"
       },
       "title": {
         "font-family": "Helvetica Neue, sans-serif",
@@ -655,17 +653,16 @@ function loadShopifyBuyButton(cat) {
   "cart": {
     "styles": {
       "button": {
-        "font-family": "Inter, sans-serif",
-        "font-weight": "600",
-        "letter-spacing": "0.5px",
-        "border-radius": "8px",
-        "background-color": "#f97316",
+        "font-family": "Open Sans, sans-serif",
+        "font-weight": "bold",
         ":hover": {
-          "background-color": "#ea580c"
+          "background-color": "#302727"
         },
+        "background-color": "#1c1717",
         ":focus": {
-          "background-color": "#ea580c"
-        }
+          "background-color": "#302727"
+        },
+        "border-radius": "25px"
       }
     },
     "text": {
@@ -674,26 +671,25 @@ function loadShopifyBuyButton(cat) {
     },
     "popup": false,
     "googleFonts": [
-      "Inter"
+      "Open Sans"
     ]
   },
   "toggle": {
     "styles": {
       "toggle": {
-        "font-family": "Inter, sans-serif",
-        "font-weight": "600",
-        "border-radius": "50%",
-        "background-color": "#f97316",
+        "font-family": "Open Sans, sans-serif",
+        "font-weight": "bold",
+        "background-color": "#1c1717",
         ":hover": {
-          "background-color": "#ea580c"
+          "background-color": "#302727"
         },
         ":focus": {
-          "background-color": "#ea580c"
+          "background-color": "#302727"
         }
       }
     },
     "googleFonts": [
-      "Inter"
+      "Open Sans"
     ]
   }
 }
