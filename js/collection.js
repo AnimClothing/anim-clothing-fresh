@@ -83,7 +83,7 @@ function renderCollection() {
           <div class="collection-card">
             <div class="collection-card-image">
               ${isComingSoon ? '<span class="coming-soon-badge">Coming Soon</span>' : ''}
-              <img src="${imagePath}" alt="${p.name}" onerror="this.src='assets/images/default.jpg'">
+              <img src="${imagePath}" alt="${p.name}" loading="lazy" onerror="this.src='assets/images/default.jpg'">
             </div>
             <div class="collection-card-body">
               <h3>${p.name}</h3>

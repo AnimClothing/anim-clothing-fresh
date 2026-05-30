@@ -304,6 +304,10 @@
 }
 
 /* --- Shopify Buy Button wrapper --- */
+.shopify-card-wrapper {
+  min-height: 420px;
+}
+
 .shopify-card-wrapper .collection-card:hover {
   transform: none;
   box-shadow: none;
