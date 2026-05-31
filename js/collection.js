@@ -57,18 +57,18 @@ function renderCollection() {
     const comingSoonCats = ['cargo', 'denim-shirt', 'formal', 'jeans'];
     const isComingSoon = comingSoonCats.includes(catId);
 
-    const shopifyPrepends = {
+    const shopifyProducts = {
       trousers: [{ divId: 'product-component-1779559173010' }],
-      tees: [{ divId: 'product-component-1779565271222' }]
+      tees: [
+        { divId: 'product-component-1779565271222' },
+        { divId: 'product-component-1780157136306' },
+        { divId: 'product-component-1780238209057' }
+      ]
     };
-    const shopifyReplace = {
-      tees: { 2: { divId: 'product-component-1780157136306' }, 3: { divId: 'product-component-1780238209057' } }
-    };
-    const prependItems = shopifyPrepends[catId] || [];
-    const replaceMap = shopifyReplace[catId] || {};
+    const shopifyItems = shopifyProducts[catId] || [];
 
     let shopifyHtml = '';
-    prependItems.forEach((item, idx) => {
+    shopifyItems.forEach((item, idx) => {
       shopifyHtml += `
         <div class="collection-card-link shopify-card-wrapper" style="animation-delay:${idx * 60}ms; display: block; text-decoration: none;">
           <div class="collection-card" style="padding:0; overflow:hidden; background:none; box-shadow:none;">
@@ -79,17 +79,7 @@ function renderCollection() {
     });
 
     grid.innerHTML = shopifyHtml + filteredProducts.map((p, i) => {
-      const replacement = replaceMap[p.id];
-      if (replacement) {
-        return `
-          <div class="collection-card-link shopify-card-wrapper" style="animation-delay:${(prependItems.length + i) * 60}ms; display: block; text-decoration: none;">
-            <div class="collection-card" style="padding:0; overflow:hidden; background:none; box-shadow:none;">
-              <div id="${replacement.divId}"></div>
-            </div>
-          </div>
-        `;
-      }
-      const offset = prependItems.length + i;
+      const offset = shopifyItems.length + i;
       const inWishlist = wishlist.includes(p.id);
       const imagePath = `assets/images/${p.category}-${p.id}.jpg`;
       return `
@@ -119,7 +109,7 @@ function renderCollection() {
       `;
     }).join('');
 
-    if (prependItems.length || Object.keys(replaceMap).length) {
+    if (shopifyItems.length) {
       loadShopifyBuyButton(catId);
     }
 
