@@ -62,7 +62,7 @@ function renderCollection() {
       tees: [{ divId: 'product-component-1779565271222' }]
     };
     const shopifyReplace = {
-      tees: { 2: { divId: 'product-component-1780157136306' } }
+      tees: { 2: { divId: 'product-component-1780157136306' }, 3: { divId: 'product-component-1780238209057' } }
     };
     const prependItems = shopifyPrepends[catId] || [];
     const replaceMap = shopifyReplace[catId] || {};
@@ -691,6 +691,276 @@ function loadShopifyBuyButton(cat) {
     "googleFonts": [
       "Open Sans"
     ]
+  }
+}
+    },
+    {
+      divId: 'product-component-1780238209057',
+      productId: '9211171406050',
+      options: {
+  "product": {
+    "styles": {
+      "product": {
+        "@media (min-width: 601px)": {
+          "max-width": "calc(25% - 20px)",
+          "margin-left": "20px",
+          "margin-bottom": "50px"
+        }
+      },
+      "title": {
+        "font-family": "Karla, sans-serif"
+      },
+      "button": {
+        "font-family": "Droid Sans, sans-serif",
+        "font-weight": "bold",
+        ":hover": {
+          "background-color": "#200303"
+        },
+        "background-color": "#130202",
+        ":focus": {
+          "background-color": "#200303"
+        },
+        "border-radius": "28px",
+        "padding-left": "39px",
+        "padding-right": "39px"
+      },
+      "price": {
+        "font-family": "Geneva, sans-serif",
+        "font-size": "16px"
+      },
+      "compareAt": {
+        "font-family": "Geneva, sans-serif",
+        "font-size": "13.6px"
+      },
+      "unitPrice": {
+        "font-family": "Geneva, sans-serif",
+        "font-size": "13.6px"
+      }
+    },
+    "buttonDestination": "modal",
+    "contents": {
+      "options": false
+    },
+    "text": {
+      "button": "View product"
+    },
+    "googleFonts": [
+      "Karla",
+      "Droid Sans"
+    ]
+  },
+  "productSet": {
+    "styles": {
+      "products": {
+        "@media (min-width: 601px)": {
+          "margin-left": "-20px"
+        }
+      }
+    }
+  },
+  "modalProduct": {
+    "contents": {
+      "img": false,
+      "imgWithCarousel": true,
+      "button": false,
+      "buttonWithQuantity": true
+    },
+    "styles": {
+      "product": {
+        "@media (min-width: 601px)": {
+          "max-width": "100%",
+          "margin-left": "0px",
+          "margin-bottom": "0px"
+        }
+      },
+      "button": {
+        "font-family": "Droid Sans, sans-serif",
+        "font-weight": "bold",
+        ":hover": {
+          "background-color": "#200303"
+        },
+        "background-color": "#130202",
+        ":focus": {
+          "background-color": "#200303"
+        },
+        "border-radius": "28px",
+        "padding-left": "39px",
+        "padding-right": "39px"
+      },
+      "title": {
+        "font-family": "Helvetica Neue, sans-serif",
+        "font-weight": "bold",
+        "font-size": "26px",
+        "color": "#4c4c4c"
+      },
+      "price": {
+        "font-family": "Montserrat, sans-serif",
+        "font-weight": "bold",
+        "font-size": "19px",
+        "color": "#0e0101"
+      },
+      "compareAt": {
+        "font-family": "Montserrat, sans-serif",
+        "font-weight": "bold",
+        "font-size": "16.15px",
+        "color": "#0e0101"
+      },
+      "unitPrice": {
+        "font-family": "Montserrat, sans-serif",
+        "font-weight": "bold",
+        "font-size": "16.15px",
+        "color": "#0e0101"
+      },
+      "description": {
+        "font-family": "Arial, sans-serif",
+        "font-size": "15px"
+      }
+    },
+    "googleFonts": [
+      "Montserrat",
+      "Droid Sans"
+    ],
+    "text": {
+      "button": "Add to cart"
+    }
+  },
+  "modal": {
+    "styles": {
+      "modal": {
+        "background-color": "#dadae5"
+      }
+    }
+  },
+  "option": {},
+  "cart": {
+    "styles": {
+      "button": {
+        "font-family": "Droid Sans, sans-serif",
+        "font-weight": "bold",
+        ":hover": {
+          "background-color": "#200303"
+        },
+        "background-color": "#130202",
+        ":focus": {
+          "background-color": "#200303"
+        },
+        "border-radius": "28px"
+      },
+      "title": {
+        "color": "#220202"
+      },
+      "header": {
+        "color": "#220202"
+      },
+      "lineItems": {
+        "color": "#220202"
+      },
+      "subtotalText": {
+        "color": "#220202"
+      },
+      "subtotal": {
+        "color": "#220202"
+      },
+      "notice": {
+        "color": "#220202"
+      },
+      "currency": {
+        "color": "#220202"
+      },
+      "close": {
+        "color": "#220202",
+        ":hover": {
+          "color": "#220202"
+        }
+      },
+      "empty": {
+        "color": "#220202"
+      },
+      "noteDescription": {
+        "color": "#220202"
+      },
+      "discountText": {
+        "color": "#220202"
+      },
+      "discountIcon": {
+        "fill": "#220202"
+      },
+      "discountAmount": {
+        "color": "#220202"
+      },
+      "cart": {
+        "background-color": "#dbc5c5"
+      },
+      "footer": {
+        "background-color": "#dbc5c5"
+      }
+    },
+    "text": {
+      "total": "Subtotal",
+      "button": "Checkout"
+    },
+    "contents": {
+      "note": true
+    },
+    "popup": false,
+    "googleFonts": [
+      "Droid Sans"
+    ]
+  },
+  "toggle": {
+    "styles": {
+      "toggle": {
+        "font-family": "Droid Sans, sans-serif",
+        "font-weight": "bold",
+        "background-color": "#130202",
+        ":hover": {
+          "background-color": "#200303"
+        },
+        ":focus": {
+          "background-color": "#200303"
+        }
+      }
+    },
+    "googleFonts": [
+      "Droid Sans"
+    ]
+  },
+  "lineItem": {
+    "styles": {
+      "variantTitle": {
+        "color": "#220202"
+      },
+      "title": {
+        "color": "#220202"
+      },
+      "price": {
+        "color": "#220202"
+      },
+      "fullPrice": {
+        "color": "#220202"
+      },
+      "discount": {
+        "color": "#220202"
+      },
+      "discountIcon": {
+        "fill": "#220202"
+      },
+      "quantity": {
+        "color": "#220202"
+      },
+      "quantityIncrement": {
+        "color": "#220202",
+        "border-color": "#220202"
+      },
+      "quantityDecrement": {
+        "color": "#220202",
+        "border-color": "#220202"
+      },
+      "quantityInput": {
+        "color": "#220202",
+        "border-color": "#220202"
+      }
+    }
   }
 }
     }]
