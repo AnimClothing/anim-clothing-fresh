@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-   <title>ANIM CLOTHING — Collection</title>
+   <title>ANIM CLOTHING — Oversized Tees</title>
+  <meta name="description" content="Shop our collection of oversized tees — relaxed fits, bold energy." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/collection.css" />
   <link rel="stylesheet" href="css/modal.css" />
-  
 </head>
 <body>
 
@@ -39,9 +39,9 @@
   <section class="collection-hero" id="collectionHero">
     <div class="collection-hero-bg"></div>
     <div class="collection-hero-content">
-      <span class="section-tag" id="collTag">Collection</span>
-      <h1 class="collection-hero-title" id="collTitle">Loading...</h1>
-      <p class="collection-hero-desc" id="collDesc"></p>
+      <span class="section-tag">Oversized Tees</span>
+      <h1 class="collection-hero-title">Oversized Tees</h1>
+      <p class="collection-hero-desc">Relaxed fits, bold energy — the foundation of your wardrobe.</p>
     </div>
   </section>
 
@@ -53,50 +53,37 @@
   </section>
 
   <!-- Cart / Wishlist Sidebars -->
-  <!-- Cart Sidebar -->
   <div class="cart-sidebar" id="cartSidebar">
     <div class="cart-header">
       <h3>Your Cart <span id="cartItemCount">(0)</span></h3>
       <button id="cartClose" aria-label="Close cart"><i class="fas fa-times"></i></button>
     </div>
     <div class="cart-items" id="cartItems">
-      <div class="cart-empty">
-        <i class="fas fa-shopping-bag"></i>
-        <p>Your bag is empty</p>
-      </div>
+      <div class="cart-empty"><i class="fas fa-shopping-bag"></i><p>Your bag is empty</p></div>
     </div>
     <div class="cart-footer">
-      <div class="cart-total">
-        <span>Total</span>
-        <span id="cartTotal">Rs. 0</span>
-      </div>
+      <div class="cart-total"><span>Total</span><span id="cartTotal">Rs. 0</span></div>
       <button class="btn btn-primary checkout-btn">Checkout</button>
     </div>
   </div>
   <div class="cart-overlay" id="cartOverlay"></div>
 
-  <!-- Wishlist Sidebar -->
   <div class="cart-sidebar wishlist-sidebar" id="wishlistSidebar">
     <div class="cart-header">
       <h3>Wishlist <span id="wishlistCount">(0)</span></h3>
       <button id="wishlistClose" aria-label="Close wishlist"><i class="fas fa-times"></i></button>
     </div>
     <div class="cart-items" id="wishlistItems">
-      <div class="cart-empty">
-        <i class="fas fa-heart"></i>
-        <p>Your wishlist is empty</p>
-      </div>
+      <div class="cart-empty"><i class="fas fa-heart"></i><p>Your wishlist is empty</p></div>
     </div>
   </div>
   <div class="cart-overlay" id="wishlistOverlay"></div>
 
-  <!-- Toast -->
   <div class="toast" id="toast">
     <i class="fas fa-check-circle"></i>
     <span id="toastMessage">Item added to cart!</span>
   </div>
 
-  <!-- Product Detail Modal -->
   <div class="product-modal-overlay" id="productModalOverlay">
     <div class="product-modal" id="productModal">
       <button class="modal-close" onclick="closeModal()"><i class="fas fa-times"></i></button>
@@ -110,28 +97,22 @@
         <span class="modal-price" id="modalPrice"></span>
         <div class="modal-divider"></div>
         <p class="modal-description" id="modalDescription"></p>
-
         <div class="modal-colors" id="modalColors"></div>
         <div class="modal-sizes" id="modalSizes"></div>
         <div class="modal-details" id="modalDetails"></div>
-
         <div class="modal-actions">
-          <button class="btn btn-primary" id="modalAddToCartBtn">
-            <i class="fas fa-shopping-bag"></i> Add to Cart
-          </button>
-          <button class="wishlist-btn" id="modalWishlistBtn">
-            <i class="far fa-heart"></i>
-          </button>
+          <button class="btn btn-primary" id="modalAddToCartBtn"><i class="fas fa-shopping-bag"></i> Add to Cart</button>
+          <button class="wishlist-btn" id="modalWishlistBtn"><i class="far fa-heart"></i></button>
         </div>
       </div>
     </div>
   </div>
 
+  <script>window.collectionCat = 'oversized';</script>
   <script src="js/data.js?v=3"></script>
   <script src="js/cart.js?v=3"></script>
   <script src="js/collection.js?v=3"></script>
   <script src="js/modal-data.js?v=3"></script>
   <script src="js/modal.js?v=3"></script>
-  
 </body>
 </html>

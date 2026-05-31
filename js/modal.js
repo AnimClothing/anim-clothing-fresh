@@ -27,10 +27,7 @@ function openModal(id) {
   const price = document.getElementById('modalPrice');
   const desc = document.getElementById('modalDescription');
   const imagesContainer = document.getElementById('modalImages');
-  const thumbnailsContainer = document.getElementById('modalThumbnails');
   const stockBadge = document.getElementById('modalStockBadge');
-  const actionBtn = document.getElementById('modalAddToCartBtn');
-  const wishBtn = document.getElementById('modalWishlistBtn');
 
   // Title
   title.textContent = detail.name;
@@ -64,7 +61,14 @@ function openModal(id) {
   `);
 
   // Thumbnails
-  thumbnailsContainer.innerHTML = detail.images.map((img, i) =>
+  let thumbsContainer = document.getElementById('modalThumbnails');
+  if (!thumbsContainer) {
+    thumbsContainer = document.createElement('div');
+    thumbsContainer.id = 'modalThumbnails';
+    thumbsContainer.className = 'modal-thumbnails';
+    imagesContainer.parentElement.appendChild(thumbsContainer);
+  }
+  thumbsContainer.innerHTML = detail.images.map((img, i) =>
     `<div class="modal-thumb ${i === 0 ? 'active' : ''}" onclick="modalGoToImage(${i})">
        <img src="${img}" alt="" style="width:100%;height:100%;object-fit:cover;border-radius:6px;" onerror="this.style.display='none';this.parentElement.innerHTML='<i class=&quot;fas fa-image&quot; style=&quot;font-size:1.2rem&quot;></i>'">
      </div>`
@@ -109,31 +113,53 @@ function openModal(id) {
     `;
   }
 
-  // Action button
-  if (actionBtn) {
-    actionBtn.innerHTML = detail.inStock
-      ? '<i class="fas fa-shopping-bag"></i> Add to Cart'
-      : '<i class="fas fa-exclamation-circle"></i> Notify Me';
-    actionBtn.disabled = !detail.inStock;
-    actionBtn.style.opacity = detail.inStock ? '1' : '.5';
-    actionBtn.onclick = () => {
+  // Generate action buttons dynamically
+  const actionsContainer = document.querySelector('.modal-actions');
+  if (actionsContainer) {
+    actionsContainer.innerHTML = detail.inStock ? `
+      <button class="btn btn-primary" id="modalAddToCartBtn">
+        <i class="fas fa-shopping-bag"></i> Add to Cart
+      </button>
+      <button class="btn btn-buy-now" id="modalBuyNowBtn">
+        <i class="fas fa-bolt"></i> Buy Now
+      </button>
+      <button class="wishlist-btn ${wishlist.includes(id) ? 'wishlisted' : ''}" id="modalWishlistBtn">
+        <i class="${wishlist.includes(id) ? 'fas' : 'far'} fa-heart"></i>
+      </button>
+    ` : `
+      <button class="btn btn-primary" id="modalAddToCartBtn" disabled style="opacity:.5">
+        <i class="fas fa-exclamation-circle"></i> Notify Me
+      </button>
+      <button class="wishlist-btn ${wishlist.includes(id) ? 'wishlisted' : ''}" id="modalWishlistBtn">
+        <i class="${wishlist.includes(id) ? 'fas' : 'far'} fa-heart"></i>
+      </button>
+    `;
+
+    document.getElementById('modalAddToCartBtn').onclick = () => {
       if (detail.inStock) {
         addToCart(id);
         closeModal();
+        showToast('Added to cart!');
       } else {
         showToast('Coming soon! We\'ll notify you.');
       }
     };
-  }
 
-  // Wishlist button
-  if (wishBtn) {
-    const inWishlist = wishlist.includes(id);
-    wishBtn.className = 'wishlist-btn ' + (inWishlist ? 'wishlisted' : '');
-    wishBtn.innerHTML = inWishlist ? '<i class="fas fa-heart"></i>' : '<i class="far fa-heart"></i>';
-    wishBtn.onclick = () => {
+    const buyNowBtn = document.getElementById('modalBuyNowBtn');
+    if (buyNowBtn) {
+      buyNowBtn.onclick = () => {
+        addToCart(id);
+        closeModal();
+        document.getElementById('cartSidebar')?.classList.add('open');
+        document.getElementById('cartOverlay')?.classList.add('open');
+        document.body.style.overflow = 'hidden';
+        showToast('Added to cart!');
+      };
+    }
+
+    document.getElementById('modalWishlistBtn').onclick = () => {
       toggleWishlist(id);
-      openModal(id); // refresh state
+      openModal(id);
     };
   }
 

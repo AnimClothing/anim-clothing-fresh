@@ -99,11 +99,21 @@ function renderCategoryCards(type) {
 
   const filtered = type === 'all' ? categories : categories.filter(c => c.type === type);
 
+   const catPageMap = {
+      oversized: 'oversized-tees.html',
+      polo: 'polo-shirts.html',
+      'denim-shirt': 'denim-shirts.html',
+      formal: 'formal-shirts.html',
+      cargo: 'cargo-pants.html',
+      jeans: 'denim-jeans.html',
+      trousers: 'trousers.html'
+    };
    catGrid.innerHTML = filtered.map((cat, i) => {
-     // Generate image path based on category ID
-     const imagePath = `assets/images/${cat.id}-card.jpg`;
-     return `
-       <a href="collection.html?cat=${cat.id}" class="cat-card reveal" data-category="${cat.id}">
+      // Generate image path based on category ID
+      const imagePath = `assets/images/${cat.id}-card.jpg`;
+      const pageUrl = catPageMap[cat.id] || `collection.html?cat=${cat.id}`;
+      return `
+        <a href="${pageUrl}" class="cat-card reveal" data-category="${cat.id}">
          <div class="cat-card-bg">
            <img src="${imagePath}" alt="${cat.name}" onerror="this.onerror=null;this.src='assets/images/default-card.jpg'">
          </div>
