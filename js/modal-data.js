@@ -1,149 +1,148 @@
 /* ============================================
-   ANIM CLOTHING — Product Detail Data
+   ANIM CLOTHING â€” Product Detail Data
    ============================================ */
 
 const productDetails = {
   // === OVERSIZED TEES ===
   1: {
-    name: 'Acid Wash Oversized',
-    price: 3499,
-    category: 'Oversized Tees',
-    description: 'Our signature acid wash oversized tee is crafted from premium 100% organic cotton. The relaxed boxy fit and raw hem edges give it that effortlessly cool streetwear aesthetic. Each piece is pre-washed for ultra-soft comfort from day one.',
+    name: 'Premium Beige & White Striped T-Shirt',
+    price: 1999,
+    originalPrice: 2500,
+    category: 'Tees',
+    description: 'Stay stylish and comfortable with this premium striped t-shirt. Featuring a classic beige and white stripe pattern, soft breathable fabric, and a modern fit, it\'s perfect for everyday wear. Easy to pair with jeans, chinos, or shorts for a clean and effortless look.',
     colors: ['Black', 'Off-White', 'Olive', 'Rust'],
-    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
+    sizes: ['S', 'M', 'L', 'XL'],
     images: [
-      'https://picsum.photos/seed/a1o/600/800',
-      'https://picsum.photos/seed/a2o/600/800',
-      'https://picsum.photos/seed/a3o/600/800',
-      'https://picsum.photos/seed/a4o/600/800'
+      'assets/images/Acid Wash Oversized 1.jpeg',
+      'assets/images/Acid Wash Oversized 2.jpeg',
+      'assets/images/Acid Wash Oversized 3.jpeg'
     ],
-    material: '100% Organic Cotton, 220 GSM',
+    material: 'Cotton-Microfiber Polyester-Lycra Blend, 220 GSM',
     care: 'Machine wash cold, inside out. Do not bleach. Tumble dry low.',
     inStock: true
   },
   2: {
-    name: 'Black Heavyweight Tee',
-    price: 3199,
-    category: 'Oversized Tees',
-    description: 'Built for everyday wear. Our heavyweight tee features a dense 280 GSM cotton that holds its shape wash after wash. The dropped shoulders and extended body create the perfect oversized silhouette.',
-    colors: ['Black', 'Charcoal', 'Navy'],
-    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
+    name: 'Anim Classic Mint White Striped Tee',
+    price: 1999,
+    originalPrice: 2500,
+    category: 'Tees',
+    description: 'Stay stylish and comfortable with this premium striped t-shirt. Featuring a Classic Mint and White Stripe pattern, soft breathable fabric, and a modern fit, it\'s perfect for everyday wear. Easy to pair with jeans, chinos, or shorts for a clean and effortless look.',
+    colors: ['Mint Green', 'White', 'Black', 'Off-White'],
+    sizes: ['S', 'M', 'L', 'XL'],
     images: [
-      'https://picsum.photos/seed/b1h/600/800',
-      'https://picsum.photos/seed/b2h/600/800',
-      'https://picsum.photos/seed/b3h/600/800',
-      'https://picsum.photos/seed/b4h/600/800'
+      'assets/images/Anim Classic Mint White Striped Tee 1.png',
+      'assets/images/Anim Classic Mint White Striped Tee 2.png',
+      'assets/images/Anim Classic Mint White Striped Tee 3.png'
     ],
-    material: '100% Ringspun Cotton, 280 GSM',
+    material: 'Cotton-Microfiber Polyester-Lycra Blend, 220 GSM',
     care: 'Machine wash cold. Tumble dry low. Do not iron print.',
     inStock: true
   },
   3: {
-    name: 'Cream Drop Shoulder',
-    price: 3299,
-    category: 'Oversized Tees',
-    description: 'A relaxed essential with a drop shoulder construction for an effortlessly cool fit. The cream base makes it a versatile layering piece that pairs with everything.',
-    colors: ['Cream', 'Beige', 'Sand', 'Taupe'],
-    sizes: ['M', 'L', 'XL'],
+    name: 'ANIM Premium Ribbed Crew Neck T-Shirt',
+    price: 1999,
+    originalPrice: 2500,
+    category: 'Tees',
+    description: 'Crafted from premium ribbed fabric, this stylish Blue T-shirt offers all-day comfort with a modern, refined look. Made from soft, breathable, and lightweight material, it is the perfect choice for both casual and smart-casual outfits. Comfortable, versatile, and easy to wear, it\'s an essential addition to any wardrobe.',
+    colors: ['Black', 'White', 'Grey', 'Navy'],
+    sizes: ['S', 'M', 'L', 'XL'],
     images: [
-      'https://picsum.photos/seed/c1d/600/800',
-      'https://picsum.photos/seed/c2d/600/800',
-      'https://picsum.photos/seed/c3d/600/800',
-      'https://picsum.photos/seed/c4d/600/800'
+      'assets/images/ANIM Premium Ribbed Crew Neck T-Shirt.jpeg',
+      'assets/images/ANIM Premium Ribbed Crew Neck T-Shirt 2.jpeg',
+      'assets/images/ANIM Premium Ribbed Crew Neck T-Shirt 3.jpeg'
     ],
-    material: '100% Premium Cotton, 240 GSM',
+    material: 'Cotton-Microfiber Polyester-Lycra Blend, 220 GSM',
     care: 'Machine wash cold. Lay flat to dry for best results.',
     inStock: true
   },
   100: {
-    name: 'Grey Vintage Wash',
-    price: 3399,
-    category: 'Oversized Tees',
-    description: 'Pre-washed vintage grey tee with a lived-in feel from the start. Slightly oversized with a straight hem and subtle chest pocket detail.',
-    colors: ['Light Grey', 'Heather Grey', 'Slate'],
-    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
+    name: 'Black & White Vertical Striped Premium T-Shirt',
+    price: 1999,
+    originalPrice: 2500,
+    category: 'Tees',
+    description: 'Elevate your everyday style with the Anim Clothing Black & White Vertical Striped T-Shirt. Crafted from soft, breathable fabric, this premium tee offers all-day comfort with a modern slim-fit look. The timeless vertical stripe design adds a sleek and fashionable touch, making it perfect for casual outings, streetwear styling, or everyday wear.',
+    colors: ['Black', 'White', 'Grey', 'Charcoal'],
+    sizes: ['S', 'M', 'L', 'XL'],
     images: [
-      'https://picsum.photos/seed/d1v/600/800',
-      'https://picsum.photos/seed/d2v/600/800',
-      'https://picsum.photos/seed/d3v/600/800',
-      'https://picsum.photos/seed/d4v/600/800'
+      'assets/images/Black & White Vertical Striped Premium T-Shirt 1.jpeg',
+      'assets/images/Black & White Vertical Striped Premium T-Shirt 2.jpeg',
+      'assets/images/Black & White Vertical Striped Premium T-Shirt 3.jpeg'
     ],
-    material: '80% Cotton, 20% Polyester, 260 GSM',
+    material: 'Cotton-Microfiber Polyester-Lycra Blend, 220 GSM',
     care: 'Machine wash cold. Tumble dry medium.',
     inStock: true
   },
   101: {
-    name: 'Olive Green Oversized',
-    price: 3699,
-    category: 'Oversized Tees',
-    description: 'Military-inspired oversized tee in rich olive. Features a boxy cut, ribbed crew neckline, and a chest pocket for functional style.',
-    colors: ['Olive', 'Army Green', 'Khaki'],
-    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
+    name: 'Black Ribbed Essential T-Shirt',
+    price: 1999,
+    originalPrice: 2500,
+    category: 'Tees',
+    description: 'Upgrade your everyday style with this premium black ribbed T-shirt. Crafted from soft, breathable fabric for all-day comfort, featuring a modern fit that pairs perfectly with jeans, chinos, or shorts. A versatile wardrobe essential for casual and smart-casual looks.',
+    colors: ['Black', 'Charcoal', 'Dark Grey'],
+    sizes: ['S', 'M', 'L', 'XL'],
     images: [
-      'https://picsum.photos/seed/e1o/600/800',
-      'https://picsum.photos/seed/e2o/600/800',
-      'https://picsum.photos/seed/e3o/600/800',
-      'https://picsum.photos/seed/e4o/600/800'
+      'assets/images/Black Ribbed Essential T-Shirt 1.jpeg',
+      'assets/images/Black Ribbed Essential T-Shirt 2.jpeg',
+      'assets/images/Black Ribbed Essential T-Shirt 3.jpeg'
     ],
-    material: '100% Heavyweight Cotton, 260 GSM',
+    material: 'Cotton-Microfiber Polyester-Lycra Blend, 220 GSM',
     care: 'Machine wash cold with like colors. Do not bleach.',
     inStock: false
   },
   102: {
-    name: 'Navy Blue Relaxed',
-    price: 3499,
-    category: 'Oversized Tees',
-    description: 'Classic navy in a relaxed easy-fit silhouette. Clean lines with no logos — just pure understated style. The deep navy wash gets better with every wash.',
-    colors: ['Navy', 'Midnight', 'Indigo'],
+    name: 'Premium White Ribbed Crew Neck T-Shirt',
+    price: 1999,
+    originalPrice: 2500,
+    category: 'Tees',
+    description: 'A clean and modern white ribbed t-shirt crafted for all-day comfort. Perfect for casual wear with a premium look and soft feel.',
+    colors: ['White', 'Cream', 'Off-White'],
     sizes: ['S', 'M', 'L', 'XL'],
     images: [
-      'https://picsum.photos/seed/f1n/600/800',
-      'https://picsum.photos/seed/f2n/600/800',
-      'https://picsum.photos/seed/f3n/600/800',
-      'https://picsum.photos/seed/f4n/600/800'
+      'assets/images/Premium White Ribbed Crew Neck T-Shirt 1.jpeg',
+      'assets/images/Premium White Ribbed Crew Neck T-Shirt 2.jpeg',
+      'assets/images/Premium White Ribbed Crew Neck T-Shirt 3.jpeg'
     ],
-    material: '100% Supima Cotton, 220 GSM',
+    material: 'Cotton-Microfiber Polyester-Lycra Blend, 220 GSM',
     care: 'Machine wash cold. Tumble dry low.',
     inStock: true
   },
   103: {
-    name: 'Burgundy Slouch Tee',
-    price: 3799,
-    category: 'Oversized Tees',
-    description: 'Stand out in deep burgundy. This slouch tee has an intentionally oversized fit with dropped shoulders and raw-edge finishing for a high-fashion streetwear look.',
-    colors: ['Burgundy', 'Wine Red', 'Maroon'],
-    sizes: ['M', 'L', 'XL', 'XXL'],
+    name: 'Anim Classic Stripe Tee – Olive Green',
+    price: 1999,
+    originalPrice: 2500,
+    category: 'Tees',
+    description: 'Upgrade your everyday style with the Anim Classic Stripe Tee. Crafted from soft, breathable fabric, this olive green t-shirt features clean white stripes and a modern fit for a comfortable yet stylish look. Perfect for casual wear, outings, and everyday fashion.',
+    colors: ['Olive Green', 'Black', 'White'],
+    sizes: ['S', 'M', 'L', 'XL'],
     images: [
-      'https://picsum.photos/seed/g1b/600/800',
-      'https://picsum.photos/seed/g2b/600/800',
-      'https://picsum.photos/seed/g3b/600/800',
-      'https://picsum.photos/seed/g4b/600/800'
+      'assets/images/Anim Classic Stripe Tee – Olive Green 1.jpeg',
+      'assets/images/Anim Classic Stripe Tee – Olive Green 2.jpeg'
     ],
-    material: '100% Combed Cotton, 240 GSM',
+    material: 'Cotton-Microfiber Polyester-Lycra Blend, 220 GSM',
     care: 'Machine wash cold inside out. Do not tumble dry.',
     inStock: true
   },
   104: {
-    name: 'White Textured Tee',
+    name: 'Men\'s Coffee Linen Trousers – Straight Fit Summer Pants',
     price: 2999,
-    category: 'Oversized Tees',
-    description: 'A textured white tee that adds dimension to your look. The subtle waffle-knit texture catches light beautifully while maintaining an oversized relaxed fit.',
-    colors: ['White', 'Bone', 'Ecru'],
-    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
+    originalPrice: 4500,
+    category: 'Trousers',
+    description: 'Upgrade your everyday wardrobe with our Men\'s Coffee Linen Trousers, designed for men who appreciate comfort, versatility, and timeless style. Crafted from a lightweight linen-rich fabric, these trousers offer exceptional breathability, making them perfect for warm weather and all-day wear. The versatile coffee shade offers a refined yet relaxed look, making these pants ideal for pairing with polo shirts, linen shirts, crew neck tees, and smart casual outfits. The straight fit silhouette provides a clean drape while ensuring unrestricted movement and all-day comfort. Authentic Polo Ralph Lauren design inspiration. Premium lightweight linen fabric. Breathable and comfortable for warm weather. Straight fit silhouette for a modern look. Adjustable drawstring waistband for added comfort. Durable stitching and premium finishing. Versatile Coffee color. Perfect with polo shirts and smart casual outfits.',
+    colors: ['Coffee'],
+    sizes: ['S', 'M', 'L', 'XL'],
     images: [
-      'https://picsum.photos/seed/h1w/600/800',
-      'https://picsum.photos/seed/h2w/600/800',
-      'https://picsum.photos/seed/h3w/600/800',
-      'https://picsum.photos/seed/h4w/600/800'
+      'assets/images/Coffee Linen 1.jpeg',
+      'assets/images/Coffee Linen 1.jpeg',
     ],
-    material: '100% Cotton Waffle Knit, 220 GSM',
-    care: 'Machine wash cold. Tumble dry low. Remove promptly.',
+    material: 'Premium Linen Blend',
+    care: 'Machine wash cold. Tumble dry low. Iron on medium heat if needed.',
     inStock: true
   },
   105: {
     name: 'Charcoal Raw Edge',
     price: 3599,
-    category: 'Oversized Tees',
+    originalPrice: 4500,
+    category: 'Tees',
     description: 'Charcoal tone with raw-edge detailing for that undone look. Premium mid-weight cotton with a relaxed straight fit. A wardrobe essential with an edge.',
     colors: ['Charcoal', 'Graphite', 'Dark Grey'],
     sizes: ['S', 'M', 'L', 'XL'],
@@ -151,60 +150,58 @@ const productDetails = {
       'https://picsum.photos/seed/i1c/600/800',
       'https://picsum.photos/seed/i2c/600/800',
       'https://picsum.photos/seed/i3c/600/800',
-      'https://picsum.photos/seed/i4c/600/800'
     ],
-    material: '100% Cotton, 250 GSM',
+    material: 'Cotton-Microfiber Polyester-Lycra Blend, 220 GSM',
     care: 'Machine wash cold. Do not bleach. Hang dry.',
     inStock: true
   },
   106: {
     name: 'Sand Washed Loose',
     price: 3499,
-    category: 'Oversized Tees',
+    originalPrice: 4400,
+    category: 'Tees',
     description: 'Sand washed for a premium soft hand feel. The loose, flowing fit makes this perfect for layering or wearing on its own during warmer months.',
     colors: ['Sand', 'Terracotta', 'Desert', 'Rust'],
-    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
+    sizes: ['S', 'M', 'L', 'XL'],
     images: [
       'https://picsum.photos/seed/j1s/600/800',
       'https://picsum.photos/seed/j2s/600/800',
       'https://picsum.photos/seed/j3s/600/800',
-      'https://picsum.photos/seed/j4s/600/800'
     ],
-    material: '100% Pre-shrunk Cotton, 230 GSM',
+    material: 'Cotton-Microfiber Polyester-Lycra Blend, 220 GSM',
     care: 'Machine wash cold. Tumble dry medium.',
     inStock: true
   },
 
   // === POLO ===
   7: {
-    name: 'Slim Fit Polo',
-    price: 4499,
+    name: 'Navy Blue Zip Polo Shirt',
+    price: 2500,
+    originalPrice: 4500,
     category: 'Polo Shirts',
-    description: 'Elevated slim fit polo with a contrast placket and tonal embroidered logo. Crafted from breathable piqué cotton for all-day comfort.',
-    colors: ['Black', 'White', 'Navy', 'Burgundy'],
+    description: 'Upgrade your wardrobe with this premium Navy Blue Zip Polo Shirt. Designed with a modern fit, breathable fabric, and a stylish zip-neck collar, it delivers the perfect balance of comfort and sophistication for everyday wear.',
+    colors: ['Navy Blue', 'Black', 'White'],
     sizes: ['S', 'M', 'L', 'XL'],
     images: [
-      'https://picsum.photos/seed/k1p/600/800',
-      'https://picsum.photos/seed/k2p/600/800',
-      'https://picsum.photos/seed/k3p/600/800',
-      'https://picsum.photos/seed/k4p/600/800'
+      'assets/images/Navy Blue Zip Polo Shirt 1.jpeg',
+      'assets/images/Navy Blue Zip Polo Shirt 2.jpeg'
     ],
-    material: '100% Piqué Cotton',
+    material: 'Cotton-Microfiber Polyester-Lycra Blend, 220 GSM',
     care: 'Machine wash cold. Iron on medium heat.',
     inStock: true
   },
   8: {
     name: 'Two-Tone Polo',
     price: 4799,
+    originalPrice: 6000,
     category: 'Polo Shirts',
     description: 'Bold two-tone design that splits the polo down the middle for a modern asymmetric look. Mesh panel inserts for enhanced ventilation.',
     colors: ['Navy/White', 'Black/Grey', 'Forest/Mint'],
-    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
+    sizes: ['S', 'M', 'L', 'XL'],
     images: [
       'https://picsum.photos/seed/l1t/600/800',
       'https://picsum.photos/seed/l2t/600/800',
       'https://picsum.photos/seed/l3t/600/800',
-      'https://picsum.photos/seed/l4t/600/800'
     ],
     material: '95% Cotton, 5% Elastane',
     care: 'Machine wash cold. Do not tumble dry.',
@@ -213,15 +210,15 @@ const productDetails = {
   107: {
     name: 'Classic Black Polo',
     price: 4199,
+    originalPrice: 5200,
     category: 'Polo Shirts',
     description: 'The timeless black polo reimagined with a modern athletic fit. Moisture-wicking fabric keeps you fresh from morning meetings to evening outings.',
     colors: ['Black', 'Dark Charcoal'],
-    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
+    sizes: ['S', 'M', 'L', 'XL'],
     images: [
       'https://picsum.photos/seed/m1b/600/800',
       'https://picsum.photos/seed/m2b/600/800',
       'https://picsum.photos/seed/m3b/600/800',
-      'https://picsum.photos/seed/m4b/600/800'
     ],
     material: '96% Cotton, 4% Spandex',
     care: 'Machine wash cold. Tumble dry low.',
@@ -230,32 +227,32 @@ const productDetails = {
   108: {
     name: 'Striped Club Polo',
     price: 4399,
+    originalPrice: 5500,
     category: 'Polo Shirts',
     description: 'A nod to the classic club stripe, reworked in a relaxed fit with ribbed collar and cuffs. The perfect smart-casual option.',
     colors: ['Navy/Red', 'Blue/White', 'Green/Gold'],
-    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
+    sizes: ['S', 'M', 'L', 'XL'],
     images: [
       'https://picsum.photos/seed/n1s/600/800',
       'https://picsum.photos/seed/n2s/600/800',
       'https://picsum.photos/seed/n3s/600/800',
-      'https://picsum.photos/seed/n4s/600/800'
     ],
-    material: '100% Cotton Piqué',
+    material: '100% Cotton PiquÃ©',
     care: 'Machine wash warm. Iron collar if needed.',
     inStock: false
   },
   109: {
     name: 'Performance Knit Polo',
     price: 5299,
+    originalPrice: 6600,
     category: 'Polo Shirts',
     description: 'Premium performance knit polo designed for movement. UV protection, moisture management, and a sleek modern silhouette for the active lifestyle.',
     colors: ['Black', 'Grey', 'Royal Blue'],
-    sizes: ['M', 'L', 'XL', 'XXL'],
+    sizes: ['S', 'M', 'L', 'XL'],
     images: [
       'https://picsum.photos/seed/o1k/600/800',
       'https://picsum.photos/seed/o2k/600/800',
       'https://picsum.photos/seed/o3k/600/800',
-      'https://picsum.photos/seed/o4k/600/800'
     ],
     material: '88% Polyester, 12% Elastane - UV50+',
     care: 'Machine wash cold. Quick dry. Do not iron.',
@@ -264,49 +261,49 @@ const productDetails = {
   110: {
     name: 'Contrast Collar Polo',
     price: 4599,
+    originalPrice: 5700,
     category: 'Polo Shirts',
     description: 'Premium collar detail in contrasting colour adds a sophisticated touch to this modern-fit polo. Triple-stitched for durability.',
     colors: ['White/Navy', 'Black/Red', 'Grey/Blue'],
-    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
+    sizes: ['S', 'M', 'L', 'XL'],
     images: [
       'https://picsum.photos/seed/p1c/600/800',
       'https://picsum.photos/seed/p2c/600/800',
       'https://picsum.photos/seed/p3c/600/800',
-      'https://picsum.photos/seed/p4c/600/800'
     ],
     material: '97% Cotton, 3% Lycra',
     care: 'Machine wash cold. Reshape while damp.',
     inStock: true
   },
   111: {
-    name: 'Piqué Textured Polo',
+    name: 'PiquÃ© Textured Polo',
     price: 4299,
+    originalPrice: 5400,
     category: 'Polo Shirts',
-    description: 'Rich piqué texture gives depth to this elevated polo. Clean lines with a structured collar make it perfect for both casual and semi-formal occasions.',
+    description: 'Rich piquÃ© texture gives depth to this elevated polo. Clean lines with a structured collar make it perfect for both casual and semi-formal occasions.',
     colors: ['Ivory', 'Light Blue', 'Stone', 'Bottle Green'],
     sizes: ['S', 'M', 'L', 'XL'],
     images: [
       'https://picsum.photos/seed/q1t/600/800',
       'https://picsum.photos/seed/q2t/600/800',
       'https://picsum.photos/seed/q3t/600/800',
-      'https://picsum.photos/seed/q4t/600/800'
     ],
-    material: '100% Cotton Piqué, 240 GSM',
+    material: '100% Cotton PiquÃ©, 240 GSM',
     care: 'Machine wash cold. Do not tumble dry.',
     inStock: true
   },
   112: {
     name: 'Long Sleeve Polo',
     price: 4699,
+    originalPrice: 5900,
     category: 'Polo Shirts',
     description: 'Versatile long sleeve polo for cooler days. Athletic fit with ribbed cuffs and updated ANIM branding at the chest.',
     colors: ['Black', 'Navy', 'Burgundy', 'Charcoal'],
-    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
+    sizes: ['S', 'M', 'L', 'XL'],
     images: [
       'https://picsum.photos/seed/r1l/600/800',
       'https://picsum.photos/seed/r2l/600/800',
       'https://picsum.photos/seed/r3l/600/800',
-      'https://picsum.photos/seed/r4l/600/800'
     ],
     material: '95% Cotton, 5% Elastane',
     care: 'Machine wash cold. Iron on medium.',
@@ -315,15 +312,15 @@ const productDetails = {
   113: {
     name: 'Heritage Logo Polo',
     price: 5499,
+    originalPrice: 6900,
     category: 'Polo Shirts',
     description: 'Statement-making polo featuring an oversized heritage crest on the chest. Premium cotton with a tailored athletic fit that commands attention.',
     colors: ['White', 'Black', 'Navy'],
-    sizes: ['M', 'L', 'XL'],
+    sizes: ['S', 'M', 'L', 'XL'],
     images: [
       'https://picsum.photos/seed/s1h/600/800',
       'https://picsum.photos/seed/s2h/600/800',
       'https://picsum.photos/seed/s3h/600/800',
-      'https://picsum.photos/seed/s4h/600/800'
     ],
     material: '100% Filium Cotton',
     care: 'Machine wash cold. Do not bleach.',
@@ -332,6 +329,7 @@ const productDetails = {
   114: {
     name: 'Linen Blend Polo',
     price: 4999,
+    originalPrice: 6200,
     category: 'Polo Shirts',
     description: 'Breathable linen-cotton blend perfect for warm-weather dressing. Relaxed fit with a soft unstructured collar for a laid-back luxury feel.',
     colors: ['Natural', 'Sage', 'Dusty Pink'],
@@ -340,7 +338,6 @@ const productDetails = {
       'https://picsum.photos/seed/t1l/600/800',
       'https://picsum.photos/seed/t2l/600/800',
       'https://picsum.photos/seed/t3l/600/800',
-      'https://picsum.photos/seed/t4l/600/800'
     ],
     material: '55% Linen, 45% Cotton',
     care: 'Hand wash or gentle machine cycle. Iron while damp.',
@@ -351,15 +348,15 @@ const productDetails = {
   9: {
     name: 'Classic Denim Shirt',
     price: 5299,
+    originalPrice: 6600,
     category: 'Denim Shirts',
     description: 'The essential denim shirt, crafted from mid-weight washed denim. Button-down collar, chest pockets, and a relaxed straight fit. Layer it or wear it solo.',
     colors: ['Medium Wash', 'Dark Wash', 'Black'],
-    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
+    sizes: ['S', 'M', 'L', 'XL'],
     images: [
       'https://picsum.photos/seed/u1d/600/800',
       'https://picsum.photos/seed/u2d/600/800',
       'https://picsum.photos/seed/u3d/600/800',
-      'https://picsum.photos/seed/u4d/600/800'
     ],
     material: '100% Cotton Denim, 11oz',
     care: 'Machine wash cold. Do not tumble dry.',
@@ -368,15 +365,15 @@ const productDetails = {
   10: {
     name: 'Washed Denim Jacket',
     price: 6499,
+    originalPrice: 8100,
     category: 'Denim Shirts',
     description: 'Premium denim jacket with heavy wash and vintage distressing. Features button closure, chest pockets, and raw hem for an authentic rugged look.',
     colors: ['Light Blue', 'Medium Blue', 'Dark Indigo'],
-    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
+    sizes: ['S', 'M', 'L', 'XL'],
     images: [
       'https://picsum.photos/seed/v1j/600/800',
       'https://picsum.photos/seed/v2j/600/800',
       'https://picsum.photos/seed/v3j/600/800',
-      'https://picsum.photos/seed/v4j/600/800'
     ],
     material: '100% Cotton Denim, 12oz',
     care: 'Machine wash cold inside out. Hang dry.',
@@ -385,15 +382,15 @@ const productDetails = {
   115: {
     name: 'Raw Indigo Shirt',
     price: 5799,
+    originalPrice: 7200,
     category: 'Denim Shirts',
     description: 'Made from unwashed raw indigo denim that will age beautifully over time. Each wear creates unique fading patterns, making yours truly one-of-a-kind.',
     colors: ['Raw Indigo', 'Deep Blue'],
-    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
+    sizes: ['S', 'M', 'L', 'XL'],
     images: [
       'https://picsum.photos/seed/w1r/600/800',
       'https://picsum.photos/seed/w2r/600/800',
       'https://picsum.photos/seed/w3r/600/800',
-      'https://picsum.photos/seed/w4r/600/800'
     ],
     material: '100% Raw Selvedge Denim, 14oz',
     care: 'Soak in cold water before first wear. Spot clean to preserve indigo.',
@@ -402,15 +399,15 @@ const productDetails = {
   116: {
     name: 'Patchwork Denim',
     price: 6199,
+    originalPrice: 7700,
     category: 'Denim Shirts',
     description: 'Artisanal patchwork construction using different denim washes and textures. A wearable piece of art that celebrates denim culture and sustainable upcycling.',
     colors: ['Multi Denim'],
-    sizes: ['M', 'L', 'XL'],
+    sizes: ['S', 'M', 'L', 'XL'],
     images: [
       'https://picsum.photos/seed/x1p/600/800',
       'https://picsum.photos/seed/x2p/600/800',
       'https://picsum.photos/seed/x3p/600/800',
-      'https://picsum.photos/seed/x4p/600/800'
     ],
     material: 'Various Denim, 10-12oz',
     care: 'Machine wash cold gentle cycle. Do not bleach.',
@@ -419,15 +416,15 @@ const productDetails = {
   117: {
     name: 'Black Denim Overshirt',
     price: 5999,
+    originalPrice: 7500,
     category: 'Denim Shirts',
     description: 'Black washed denim overshirt with an oversized fit. Versatile enough to wear as a light jacket or layered under a coat. Features signature button detailing.',
     colors: ['Black', 'Charcoal Black'],
-    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
+    sizes: ['S', 'M', 'L', 'XL'],
     images: [
       'https://picsum.photos/seed/y1b/600/800',
       'https://picsum.photos/seed/y2b/600/800',
       'https://picsum.photos/seed/y3b/600/800',
-      'https://picsum.photos/seed/y4b/600/800'
     ],
     material: '98% Cotton, 2% Elastane Denim',
     care: 'Machine wash cold. Tumble dry low.',
@@ -436,6 +433,7 @@ const productDetails = {
   118: {
     name: 'Vintage Faded Denim',
     price: 5499,
+    originalPrice: 6900,
     category: 'Denim Shirts',
     description: 'Pre-washed and enzyme-treated for an authentic vintage feel. Faded whiskering and subtle creases add character from day one.',
     colors: ['Vintage Blue', 'Aged Wash'],
@@ -444,7 +442,6 @@ const productDetails = {
       'https://picsum.photos/seed/z1v/600/800',
       'https://picsum.photos/seed/z2v/600/800',
       'https://picsum.photos/seed/z3v/600/800',
-      'https://picsum.photos/seed/z4v/600/800'
     ],
     material: '100% Cotton Denim, 10oz',
     care: 'Machine wash cold with similar colours.',
@@ -453,15 +450,15 @@ const productDetails = {
   119: {
     name: 'Double Pocket Denim',
     price: 5799,
+    originalPrice: 7200,
     category: 'Denim Shirts',
     description: 'Functional and stylish with dual chest pockets and a pen slot. Classic denim construction with a modern slim fit and pointed collar.',
     colors: ['Blue Wash', 'Light Wash'],
-    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
+    sizes: ['S', 'M', 'L', 'XL'],
     images: [
       'https://picsum.photos/seed/a1dd/600/800',
       'https://picsum.photos/seed/a2dd/600/800',
       'https://picsum.photos/seed/a3dd/600/800',
-      'https://picsum.photos/seed/a4dd/600/800'
     ],
     material: '100% Cotton, 11oz Denim',
     care: 'Machine wash cold. Do not tumble dry.',
@@ -470,15 +467,15 @@ const productDetails = {
   120: {
     name: 'Denim Trucker Jacket',
     price: 6999,
+    originalPrice: 8700,
     category: 'Denim Shirts',
     description: 'The iconic trucker silhouette in premium denim. Structured shoulders, pointed collar, and signature chest pockets. Built to be your go-to outerwear piece.',
     colors: ['Classic Blue', 'Dark Rinse', 'Black'],
-    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
+    sizes: ['S', 'M', 'L', 'XL'],
     images: [
       'https://picsum.photos/seed/b1tk/600/800',
       'https://picsum.photos/seed/b2tk/600/800',
       'https://picsum.photos/seed/b3tk/600/800',
-      'https://picsum.photos/seed/b4tk/600/800'
     ],
     material: '100% Cotton Denim, 12oz',
     care: 'Machine wash cold. Reshape and hang dry.',
@@ -487,6 +484,7 @@ const productDetails = {
   121: {
     name: 'Stonewashed Button Down',
     price: 5199,
+    originalPrice: 6500,
     category: 'Denim Shirts',
     description: 'Soft stonewashed finish with a relaxed button-down collar. Perfectly balanced between casual and refined for any occasion.',
     colors: ['Stone', 'Light Denim', 'Cream'],
@@ -495,7 +493,6 @@ const productDetails = {
       'https://picsum.photos/seed/c1sw/600/800',
       'https://picsum.photos/seed/c2sw/600/800',
       'https://picsum.photos/seed/c3sw/600/800',
-      'https://picsum.photos/seed/c4sw/600/800'
     ],
     material: '100% Cotton, 10oz Denim',
     care: 'Machine wash cold. Low heat tumble dry.',
@@ -504,15 +501,15 @@ const productDetails = {
   122: {
     name: 'Acid Wash Denim',
     price: 5699,
+    originalPrice: 7100,
     category: 'Denim Shirts',
     description: 'Bold acid wash pattern across premium denim fabric. Unapologetically retro with a modern relaxed fit that makes a statement.',
     colors: ['Acid Blue', 'Faded Turquoise'],
-    sizes: ['M', 'L', 'XL', 'XXL'],
+    sizes: ['S', 'M', 'L', 'XL'],
     images: [
       'https://picsum.photos/seed/d1aw/600/800',
       'https://picsum.photos/seed/d2aw/600/800',
       'https://picsum.photos/seed/d3aw/600/800',
-      'https://picsum.photos/seed/d4aw/600/800'
     ],
     material: '100% Denim, 11oz Acid Wash',
     care: 'Wash separately first. Machine wash cold thereafter.',
@@ -523,15 +520,15 @@ const productDetails = {
   11: {
     name: 'Slim Formal Shirt',
     price: 3999,
+    originalPrice: 5000,
     category: 'Formal Shirts',
     description: 'Tailored slim fit formal shirt with a crisp collar and French placket. Made from easy-care cotton that stays sharp from your morning commute to evening events.',
     colors: ['White', 'Light Blue', 'Pale Pink'],
-    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
+    sizes: ['S', 'M', 'L', 'XL'],
     images: [
       'https://picsum.photos/seed/e1fm/600/800',
       'https://picsum.photos/seed/e2fm/600/800',
       'https://picsum.photos/seed/e3fm/600/800',
-      'https://picsum.photos/seed/e4fm/600/800'
     ],
     material: '100% Easy-Care Cotton, 100s Two-Ply',
     care: 'Machine wash warm. Iron on high for crisp finish.',
@@ -540,15 +537,15 @@ const productDetails = {
   12: {
     name: 'Linen Formal Shirt',
     price: 4199,
+    originalPrice: 5200,
     category: 'Formal Shirts',
     description: 'Breathable linen formal that transitions seamlessly from boardroom to weekend brunch. Relaxed structured fit with a button-down collar.',
     colors: ['Light Grey', 'Sky Blue', 'White'],
-    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
+    sizes: ['S', 'M', 'L', 'XL'],
     images: [
       'https://picsum.photos/seed/f1lr/600/800',
       'https://picsum.photos/seed/f2lr/600/800',
       'https://picsum.photos/seed/f3lr/600/800',
-      'https://picsum.photos/seed/f4lr/600/800'
     ],
     material: '100% European Linen',
     care: 'Machine wash gentle. Iron while damp for best results.',
@@ -557,15 +554,15 @@ const productDetails = {
   123: {
     name: 'White Classic Fit',
     price: 3799,
+    originalPrice: 4700,
     category: 'Formal Shirts',
-    description: 'The perfect white shirt — timeless, versatile, impeccably crafted. Cut for a comfortable regular fit with a semi-cutaway collar that works with or without a tie.',
+    description: 'The perfect white shirt â€” timeless, versatile, impeccably crafted. Cut for a comfortable regular fit with a semi-cutaway collar that works with or without a tie.',
     colors: ['Optical White'],
-    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
+    sizes: ['S', 'M', 'L', 'XL'],
     images: [
       'https://picsum.photos/seed/g1wh/600/800',
       'https://picsum.photos/seed/g2wh/600/800',
       'https://picsum.photos/seed/g3wh/600/800',
-      'https://picsum.photos/seed/g4wh/600/800'
     ],
     material: '100% Long-Staple Cotton, 120s',
     care: 'Machine wash warm. Tumble dry medium. Iron as needed.',
@@ -574,6 +571,7 @@ const productDetails = {
   124: {
     name: 'French Cuff Formal',
     price: 4999,
+    originalPrice: 6200,
     category: 'Formal Shirts',
     description: 'Premium double cuff formal shirt for those who appreciate the finer details. Split yoke for superior shoulder fit and mother-of-pearl buttons.',
     colors: ['White', 'Burgundy Stripe', 'Light Blue'],
@@ -582,7 +580,6 @@ const productDetails = {
       'https://picsum.photos/seed/h1french/600/800',
       'https://picsum.photos/seed/h2french/600/800',
       'https://picsum.photos/seed/h3french/600/800',
-      'https://picsum.photos/seed/h4french/600/800'
     ],
     material: '100% Egyptian Cotton, 140s',
     care: 'Dry clean recommended. Hand wash if needed.',
@@ -591,15 +588,15 @@ const productDetails = {
   125: {
     name: 'Herringbone Weave',
     price: 4399,
+    originalPrice: 5500,
     category: 'Formal Shirts',
     description: 'Subtle herringbone weave adds texture to this sophisticated formal shirt. Semi-slim fit with a cutaway collar for a modern professional look.',
     colors: ['Grey Herringbone', 'Blue Herringbone', 'Black'],
-    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
+    sizes: ['S', 'M', 'L', 'XL'],
     images: [
       'https://picsum.photos/seed/i1hb/600/800',
       'https://picsum.photos/seed/i2hb/600/800',
       'https://picsum.photos/seed/i3hb/600/800',
-      'https://picsum.photos/seed/i4hb/600/800'
     ],
     material: '97% Cotton, 3% Elastane Twill',
     care: 'Machine wash warm. Medium iron.',
@@ -608,6 +605,7 @@ const productDetails = {
   126: {
     name: 'Micro Check Pattern',
     price: 3899,
+    originalPrice: 4900,
     category: 'Formal Shirts',
     description: 'Understated micro check pattern in premium cotton. A great alternative to solid colours while remaining office-appropriate and stylish.',
     colors: ['Grey/White Check', 'Blue/White Check', 'Red/Burgundy Check'],
@@ -616,7 +614,6 @@ const productDetails = {
       'https://picsum.photos/seed/j1mc/600/800',
       'https://picsum.photos/seed/j2mc/600/800',
       'https://picsum.photos/seed/j3mc/600/800',
-      'https://picsum.photos/seed/j4mc/600/800'
     ],
     material: '100% Cotton Poplin, 100s',
     care: 'Machine wash cold. Iron on cotton setting.',
@@ -625,15 +622,15 @@ const productDetails = {
   127: {
     name: 'Oxford Button Down',
     price: 3699,
+    originalPrice: 4600,
     category: 'Formal Shirts',
-    description: 'Classic Oxford cloth button-down collar — a style staple. Slightly thicker fabric with a soft hand feel and a smart casual versatility.',
+    description: 'Classic Oxford cloth button-down collar â€” a style staple. Slightly thicker fabric with a soft hand feel and a smart casual versatility.',
     colors: ['Light Blue', 'Pink', 'White', 'Lavender'],
-    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
+    sizes: ['S', 'M', 'L', 'XL'],
     images: [
       'https://picsum.photos/seed/k1ox/600/800',
       'https://picsum.photos/seed/k2ox/600/800',
       'https://picsum.photos/seed/k3ox/600/800',
-      'https://picsum.photos/seed/k4ox/600/800'
     ],
     material: '100% Oxford Cotton',
     care: 'Machine wash warm. Can be tumble dried.',
@@ -642,15 +639,15 @@ const productDetails = {
   128: {
     name: 'Stretch Cotton Formal',
     price: 4099,
+    originalPrice: 5100,
     category: 'Formal Shirts',
     description: '4-way stretch cotton formal that moves with you. Anti-wrinkle treatment means less ironing and more comfort throughout the day.',
     colors: ['Charcoal', 'Navy', 'White'],
-    sizes: ['M', 'L', 'XL', 'XXL'],
+    sizes: ['S', 'M', 'L', 'XL'],
     images: [
       'https://picsum.photos/seed/l1st/600/800',
       'https://picsum.photos/seed/l2st/600/800',
       'https://picsum.photos/seed/l3st/600/800',
-      'https://picsum.photos/seed/l4st/600/800'
     ],
     material: '97% Cotton, 3% Lycra',
     care: 'Machine wash cold. No need to iron.',
@@ -659,6 +656,7 @@ const productDetails = {
   129: {
     name: 'Wing Collar Dress',
     price: 5299,
+    originalPrice: 6600,
     category: 'Formal Shirts',
     description: 'Premium wing collar dress shirt for black-tie and formal occasions. Double front panel with marcella bib and detachable wing collar studs.',
     colors: ['White', 'Ivory'],
@@ -667,7 +665,6 @@ const productDetails = {
       'https://picsum.photos/seed/m1wing/600/800',
       'https://picsum.photos/seed/m2wing/600/800',
       'https://picsum.photos/seed/m3wing/600/800',
-      'https://picsum.photos/seed/m4wing/600/800'
     ],
     material: '100% Cotton Marcella, 160s',
     care: 'Dry clean only for best longevity.',
@@ -676,15 +673,15 @@ const productDetails = {
   130: {
     name: 'Striped Executive',
     price: 4299,
+    originalPrice: 5400,
     category: 'Formal Shirts',
     description: 'Executive stripe formal shirt in premium poplin cotton. Wide spread collar and barrel cuffs for a commanding boardroom presence.',
     colors: ['White/Navy Stripe', 'White/Red Stripe', 'Blue/White Stripe'],
-    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
+    sizes: ['S', 'M', 'L', 'XL'],
     images: [
       'https://picsum.photos/seed/n1ex/600/800',
       'https://picsum.photos/seed/n2ex/600/800',
       'https://picsum.photos/seed/n3ex/600/800',
-      'https://picsum.photos/seed/n4ex/600/800'
     ],
     material: '100% Poplin Cotton, 120s',
     care: 'Machine wash warm. Iron on high for best finish.',
@@ -695,6 +692,7 @@ const productDetails = {
   20: {
     name: 'Cargo Parachute Pants',
     price: 4499,
+    originalPrice: 5600,
     category: 'Cargo Pants',
     description: 'Relaxed parachute-fit cargo pants with an elasticated waist and drawstring. Multiple oversized pockets for maximum utility without compromising on style.',
     colors: ['Black', 'Olive', 'Khaki'],
@@ -703,7 +701,6 @@ const productDetails = {
       'https://picsum.photos/seed/o1cargo/600/800',
       'https://picsum.photos/seed/o2cargo/600/800',
       'https://picsum.photos/seed/o3cargo/600/800',
-      'https://picsum.photos/seed/o4cargo/600/800'
     ],
     material: '100% Cotton Twill, 10oz',
     care: 'Machine wash cold. Hang dry for shape retention.',
@@ -712,6 +709,7 @@ const productDetails = {
   21: {
     name: 'Slim Cargo Pants',
     price: 3999,
+    originalPrice: 5000,
     category: 'Cargo Pants',
     description: 'Modern slim cargo with tapered leg and hidden zip pockets. Clean enough for smart-casual settings while keeping all the utility you need.',
     colors: ['Charcoal', 'Navy', 'Stone'],
@@ -720,7 +718,6 @@ const productDetails = {
       'https://picsum.photos/seed/p1sl/600/800',
       'https://picsum.photos/seed/p2sl/600/800',
       'https://picsum.photos/seed/p3sl/600/800',
-      'https://picsum.photos/seed/p4sl/600/800'
     ],
     material: '65% Cotton, 35% Polyester Ripstop',
     care: 'Machine wash cold. Do not tumble dry.',
@@ -729,6 +726,7 @@ const productDetails = {
   22: {
     name: 'Cargo Joggers',
     price: 3799,
+    originalPrice: 4700,
     category: 'Cargo Pants',
     description: 'The ultimate crossover between comfort and utility. Jogger-style cargo pants with tapered ankles, elastic cuffs, and two side cargo pockets.',
     colors: ['Black', 'Grey', 'Camo Green'],
@@ -737,7 +735,6 @@ const productDetails = {
       'https://picsum.photos/seed/q1jog/600/800',
       'https://picsum.photos/seed/q2jog/600/800',
       'https://picsum.photos/seed/q3jog/600/800',
-      'https://picsum.photos/seed/q4jog/600/800'
     ],
     material: '98% Cotton, 2% Elastane Fleece',
     care: 'Machine wash cold. Tumble dry low.',
@@ -746,6 +743,7 @@ const productDetails = {
   131: {
     name: 'Tactical Cargo Pants',
     price: 5299,
+    originalPrice: 6600,
     category: 'Cargo Pants',
     description: 'Heavy-duty tactical cargo with reinforced knees and triple-stitched seams. Built for durability with a street-ready aesthetic.',
     colors: ['Ranger Green', 'Black', 'Sand'],
@@ -754,7 +752,6 @@ const productDetails = {
       'https://picsum.photos/seed/r1tk/600/800',
       'https://picsum.photos/seed/r2tk/600/800',
       'https://picsum.photos/seed/r3tk/600/800',
-      'https://picsum.photos/seed/r4tk/600/800'
     ],
     material: '65% Nylon, 35% Cotton Ripstop, 12oz',
     care: 'Machine wash cold. Hang dry recommended.',
@@ -763,6 +760,7 @@ const productDetails = {
   132: {
     name: 'Wide Leg Cargo',
     price: 4299,
+    originalPrice: 5400,
     category: 'Cargo Pants',
     description: 'Relaxed wide-leg cargo with a high waist and dropped crotch. Statement-making silhouette with functional pocket detail.',
     colors: ['Black', 'Army Green', 'Taupe'],
@@ -771,7 +769,6 @@ const productDetails = {
       'https://picsum.photos/seed/s1wl/600/800',
       'https://picsum.photos/seed/s2wl/600/800',
       'https://picsum.photos/seed/s3wl/600/800',
-      'https://picsum.photos/seed/s4wl/600/800'
     ],
     material: '100% Cotton Canvas, 11oz',
     care: 'Machine wash cold. Do not tumble dry.',
@@ -780,6 +777,7 @@ const productDetails = {
   133: {
     name: 'Zip Pocket Cargo',
     price: 3899,
+    originalPrice: 4900,
     category: 'Cargo Pants',
     description: 'Streamlined cargo with hidden zippered pockets for a cleaner look. Modern slim fit with subtle branding at the back waistband.',
     colors: ['Black', 'Dark Grey', 'Olive'],
@@ -788,7 +786,6 @@ const productDetails = {
       'https://picsum.photos/seed/t1zp/600/800',
       'https://picsum.photos/seed/t2zp/600/800',
       'https://picsum.photos/seed/t3zp/600/800',
-      'https://picsum.photos/seed/t4zp/600/800'
     ],
     material: '70% Cotton, 30% Polyester Twill',
     care: 'Machine wash cold. Medium tumble dry.',
@@ -797,6 +794,7 @@ const productDetails = {
   134: {
     name: 'Ripstop Cargo',
     price: 4799,
+    originalPrice: 6000,
     category: 'Cargo Pants',
     description: 'Premium ripstop fabric with a technical look and exceptional durability. Articulated knees for movement and water-resistant coating.',
     colors: ['Black', 'Olive Drab', 'Charcoal'],
@@ -805,7 +803,6 @@ const productDetails = {
       'https://picsum.photos/seed/u1rs/600/800',
       'https://picsum.photos/seed/u2rs/600/800',
       'https://picsum.photos/seed/u3rs/600/800',
-      'https://picsum.photos/seed/u4rs/600/800'
     ],
     material: '65% Nylon, 35% Cotton Ripstop',
     care: 'Machine wash cold. Hang dry.',
@@ -814,6 +811,7 @@ const productDetails = {
   135: {
     name: 'Elastic Cargo Pants',
     price: 3599,
+    originalPrice: 4500,
     category: 'Cargo Pants',
     description: 'All-day comfort cargo with stretch fabric and adjustable elastic waist. Perfect for the go-getter who needs style and ease.',
     colors: ['Khaki', 'Black', 'Navy'],
@@ -822,7 +820,6 @@ const productDetails = {
       'https://picsum.photos/seed/v1el/600/800',
       'https://picsum.photos/seed/v2el/600/800',
       'https://picsum.photos/seed/v3el/600/800',
-      'https://picsum.photos/seed/v4el/600/800'
     ],
     material: '97% Cotton, 3% Spandex Twill',
     care: 'Machine wash cold. Tumble dry low.',
@@ -831,15 +828,15 @@ const productDetails = {
   136: {
     name: 'Multi-Pocket Cargo',
     price: 4199,
+    originalPrice: 5200,
     category: 'Cargo Pants',
     description: 'Maximum pocket utility with six functional pockets including hidden interior compartments. Technical streetwear aesthetic meets practical design.',
     colors: ['Black', 'Olive', 'Stone'],
-    sizes: ['M', 'L', 'XL', 'XXL'],
+    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
     images: [
       'https://picsum.photos/seed/w1mp/600/800',
       'https://picsum.photos/seed/w2mp/600/800',
       'https://picsum.photos/seed/w3mp/600/800',
-      'https://picsum.photos/seed/w4mp/600/800'
     ],
     material: '100% Cotton Canvas, 10oz',
     care: 'Machine wash cold. Hang dry.',
@@ -848,6 +845,7 @@ const productDetails = {
   137: {
     name: 'Cuffed Cargo Sweat',
     price: 3299,
+    originalPrice: 4100,
     category: 'Cargo Pants',
     description: 'Sweatpant comfort with cargo utility. Ribbed cuffs and elastic waist with a single large cargo pocket on each leg for a laid-back street look.',
     colors: ['Grey', 'Black', 'Olive'],
@@ -856,7 +854,6 @@ const productDetails = {
       'https://picsum.photos/seed/x1cs/600/800',
       'https://picsum.photos/seed/x2cs/600/800',
       'https://picsum.photos/seed/x3cs/600/800',
-      'https://picsum.photos/seed/x4cs/600/800'
     ],
     material: '80% Cotton, 20% Polyester French Terry',
     care: 'Machine wash cold. Tumble dry medium.',
@@ -867,8 +864,9 @@ const productDetails = {
   23: {
     name: 'Slim Straight Jeans',
     price: 4799,
+    originalPrice: 6000,
     category: 'Denim Jeans',
-    description: 'The perfect everyday jean — slim through the thigh with a straight leg. Mid-rise with just the right amount of stretch for all-day comfort.',
+    description: 'The perfect everyday jean â€” slim through the thigh with a straight leg. Mid-rise with just the right amount of stretch for all-day comfort.',
     colors: ['Classic Blue', 'Dark Indigo', 'Black'],
     sizes: ['28', '30', '32', '34', '36', '38'],
     sizesLabel: 'Waist (inches)',
@@ -876,7 +874,6 @@ const productDetails = {
       'https://picsum.photos/seed/a1sj/600/800',
       'https://picsum.photos/seed/a2sj/600/800',
       'https://picsum.photos/seed/a3sj/600/800',
-      'https://picsum.photos/seed/a4sj/600/800'
     ],
     material: '99% Cotton, 1% Elastane 12oz',
     care: 'Machine wash cold inside out. Hang dry to preserve colour.',
@@ -885,6 +882,7 @@ const productDetails = {
   24: {
     name: 'Baggy Denim Jeans',
     price: 5299,
+    originalPrice: 6600,
     category: 'Denim Jeans',
     description: 'Oversized baggy fit through the hip and thigh with a straight leg opening. Relaxed street-ready style with authentic vintage wash.',
     colors: ['Light Blue', 'Medium Wash', 'Raw'],
@@ -894,7 +892,6 @@ const productDetails = {
       'https://picsum.photos/seed/b1bj/600/800',
       'https://picsum.photos/seed/b2bj/600/800',
       'https://picsum.photos/seed/b3bj/600/800',
-      'https://picsum.photos/seed/b4bj/600/800'
     ],
     material: '100% Cotton Denim, 11oz',
     care: 'Machine wash cold. Do not tumble dry.',
@@ -903,6 +900,7 @@ const productDetails = {
   25: {
     name: 'Distressed Jeans',
     price: 4299,
+    originalPrice: 5400,
     category: 'Denim Jeans',
     description: 'Artfully distressed with authentic whiskering, fading, and subtle rips. Tapered slim fit for a modern silhouette that looks effortlessly cool.',
     colors: ['Light Blue Wash', 'Medium Wash', 'Dark Wash'],
@@ -912,7 +910,6 @@ const productDetails = {
       'https://picsum.photos/seed/c1dj/600/800',
       'https://picsum.photos/seed/c2dj/600/800',
       'https://picsum.photos/seed/c3dj/600/800',
-      'https://picsum.photos/seed/c4dj/600/800'
     ],
     material: '98% Cotton, 2% Elastane 10oz',
     care: 'Machine wash cold. Turn inside out. Hang dry.',
@@ -921,6 +918,7 @@ const productDetails = {
   138: {
     name: 'Black Skinny Jeans',
     price: 4599,
+    originalPrice: 5700,
     category: 'Denim Jeans',
     description: 'Essential black skinny jeans with premium stretch denim. Slim from hip to ankle with a mid-rise waist for a sleek, polished look.',
     colors: ['Black', 'Dark Indigo'],
@@ -930,7 +928,6 @@ const productDetails = {
       'https://picsum.photos/seed/d1sk/600/800',
       'https://picsum.photos/seed/d2sk/600/800',
       'https://picsum.photos/seed/d3sk/600/800',
-      'https://picsum.photos/seed/d4sk/600/800'
     ],
     material: '98% Cotton, 2% Elastane 11oz',
     care: 'Machine wash cold inside out. Do not bleach.',
@@ -939,6 +936,7 @@ const productDetails = {
   139: {
     name: 'Vintage Blue Straight',
     price: 4999,
+    originalPrice: 6200,
     category: 'Denim Jeans',
     description: 'Vintage-inspired wash in a straight-leg silhouette. Faded tones and subtle whiskering give these jeans a well-worn character.',
     colors: ['Vintage Blue', 'Aged Blue', 'Light Wash'],
@@ -948,7 +946,6 @@ const productDetails = {
       'https://picsum.photos/seed/e1vb/600/800',
       'https://picsum.photos/seed/e2vb/600/800',
       'https://picsum.photos/seed/e3vb/600/800',
-      'https://picsum.photos/seed/e4vb/600/800'
     ],
     material: '100% Cotton Denim, 12oz',
     care: 'Machine wash cold. Tumble dry low.',
@@ -957,6 +954,7 @@ const productDetails = {
   140: {
     name: 'Tapered Fit Jeans',
     price: 4499,
+    originalPrice: 5600,
     category: 'Denim Jeans',
     description: 'Tapered from thigh to ankle for a clean modern look. Features a comfortable mid-rise and premium stretch denim that moves with you.',
     colors: ['Indigo', 'Mid-Blue', 'Black'],
@@ -966,7 +964,6 @@ const productDetails = {
       'https://picsum.photos/seed/f1tf/600/800',
       'https://picsum.photos/seed/f2tf/600/800',
       'https://picsum.photos/seed/f3tf/600/800',
-      'https://picsum.photos/seed/f4tf/600/800'
     ],
     material: '97% Cotton, 3% Elastane 11oz',
     care: 'Machine wash cold. Iron inside out if needed.',
@@ -975,6 +972,7 @@ const productDetails = {
   141: {
     name: 'Light Wash Denim',
     price: 4199,
+    originalPrice: 5200,
     category: 'Denim Jeans',
     description: 'Summer-ready light wash denim in a relaxed straight fit. Breathable and comfortable, perfect for warm-weather styling.',
     colors: ['Light Blue', 'Bleach Wash', 'Acid Wash'],
@@ -984,7 +982,6 @@ const productDetails = {
       'https://picsum.photos/seed/g1lw/600/800',
       'https://picsum.photos/seed/g2lw/600/800',
       'https://picsum.photos/seed/g3lw/600/800',
-      'https://picsum.photos/seed/g4lw/600/800'
     ],
     material: '100% Cotton Denim, 10oz',
     care: 'Machine wash separately. Hang dry to maintain colour.',
@@ -993,6 +990,7 @@ const productDetails = {
   142: {
     name: 'Stacked Denim Jeans',
     price: 5799,
+    originalPrice: 7200,
     category: 'Denim Jeans',
     description: 'Premium stacked silhouette with extra length at the ankle for a stacked effect. Crafted from Japanese selvedge denim for the ultimate in quality.',
     colors: ['Raw Denim', 'Dark Indigo', 'Black'],
@@ -1002,7 +1000,6 @@ const productDetails = {
       'https://picsum.photos/seed/h1sd/600/800',
       'https://picsum.photos/seed/h2sd/600/800',
       'https://picsum.photos/seed/h3sd/600/800',
-      'https://picsum.photos/seed/h4sd/600/800'
     ],
     material: '100% Japanese Selvedge Denim, 14oz',
     care: 'Soak before first wear. Spot clean to develop patina.',
@@ -1011,6 +1008,7 @@ const productDetails = {
   143: {
     name: 'Raw Selvedge Denim',
     price: 6999,
+    originalPrice: 8700,
     category: 'Denim Jeans',
     description: 'The pinnacle of denim craftsmanship. Unsanforized raw selvedge denim from shuttle loom weaving. Will develop unique fading patterns over time.',
     colors: ['Raw Unwashed'],
@@ -1020,7 +1018,6 @@ const productDetails = {
       'https://picsum.photos/seed/i1rs/600/800',
       'https://picsum.photos/seed/i2rs/600/800',
       'https://picsum.photos/seed/i3rs/600/800',
-      'https://picsum.photos/seed/i4rs/600/800'
     ],
     material: '100% Raw Selvedge Denim, 15oz',
     care: 'Soak in cold water before first wear. Avoid washing for 6 months to develop natural fades.',
@@ -1029,6 +1026,7 @@ const productDetails = {
   144: {
     name: 'Ripped Knee Jeans',
     price: 3899,
+    originalPrice: 4900,
     category: 'Denim Jeans',
     description: 'Contemporary slim fit jeans with authentic pre-distressed knee rips. Stretch denim for comfort with an effortlessly edgy vibe.',
     colors: ['Light Wash', 'Medium Blue', 'Dark Wash'],
@@ -1038,7 +1036,6 @@ const productDetails = {
       'https://picsum.photos/seed/j1rk/600/800',
       'https://picsum.photos/seed/j2rk/600/800',
       'https://picsum.photos/seed/j3rk/600/800',
-      'https://picsum.photos/seed/j4rk/600/800'
     ],
     material: '98% Cotton, 2% Elastane 10oz',
     care: 'Machine wash cold. Do not tumble dry.',
@@ -1047,59 +1044,57 @@ const productDetails = {
 
   // === TROUSERS ===
   26: {
-    name: 'Pleated Trousers',
-    price: 4799,
+    name: 'Premium Black Linen Straight Fit Pants for Men – Lightweight Summer Trousers',
+    price: 2999,
+    originalPrice: 4500,
     category: 'Trousers',
-    description: 'Refined pleated trousers with a high-rise waist and relaxed leg. The forward pleat adds volume and a vintage-inspired silhouette perfect for formal and smart-casual looks.',
-    colors: ['Black', 'Charcoal', 'Navy'],
+    description: 'Upgrade your everyday wardrobe with our Premium Black Linen Straight Fit Pants, designed for men who appreciate comfort, versatility, and timeless style. Crafted from a lightweight linen-rich fabric, these trousers offer exceptional breathability, making them perfect for warm weather and all-day wear.',
+    colors: ['Black'],
     sizes: ['S', 'M', 'L', 'XL', 'XXL'],
     images: [
-      'https://picsum.photos/seed/k1pt/600/800',
-      'https://picsum.photos/seed/k2pt/600/800',
-      'https://picsum.photos/seed/k3pt/600/800',
-      'https://picsum.photos/seed/k4pt/600/800'
+      'assets/images/Black Linen Trouser 1.jpeg',
+      'assets/images/Black Linen Trouser 2.jpeg',
     ],
-    material: '97% Wool, 3% Elastane',
-    care: 'Dry clean recommended. Cool iron if needed.',
+    material: 'Premium Linen Blend',
+    care: 'Machine wash cold. Tumble dry low. Iron on medium heat if needed.',
     inStock: true
   },
   27: {
-    name: 'Wide Leg Trousers',
-    price: 5299,
+    name: 'Men\'s Olive Green Linen Trousers – Straight Fit Summer Pants',
+    price: 2999,
+    originalPrice: 4500,
     category: 'Trousers',
-    description: 'Statement wide-leg trousers with a clean pressed crease. High waist with a flowing hem that creates an elegant silhouette. Made from premium suiting fabric.',
-    colors: ['Midnight', 'Olive', 'Taupe'],
+    description: 'Upgrade your everyday wardrobe with our Men\'s Olive Green Linen Trousers, designed for men who appreciate comfort, versatility, and timeless style. Crafted from a lightweight linen-rich fabric, these trousers offer exceptional breathability, making them perfect for warm weather and all-day wear. The versatile olive green shade offers a refined yet relaxed look, making these pants ideal for pairing with polo shirts, linen shirts, crew neck tees, and smart casual outfits. The straight fit silhouette provides a clean drape while ensuring unrestricted movement and all-day comfort. Authentic Polo Ralph Lauren design inspiration. Premium lightweight linen fabric. Breathable and comfortable for warm weather. Straight fit silhouette for a modern look. Adjustable drawstring waistband for added comfort. Durable stitching and premium finishing. Versatile olive green color. Perfect with polo shirts and smart casual outfits.',
+    colors: ['Olive Green'],
     sizes: ['S', 'M', 'L', 'XL'],
     images: [
-      'https://picsum.photos/seed/l1wl/600/800',
-      'https://picsum.photos/seed/l2wl/600/800',
-      'https://picsum.photos/seed/l3wl/600/800',
-      'https://picsum.photos/seed/l4wl/600/800'
+      'assets/images/Olive Linen 1.jpeg',
+      'assets/images/Olive Linen 2.jpeg',
     ],
-    material: '65% Polyester, 35% Viscose',
-    care: 'Dry clean only. Hang immediately after cleaning.',
+    material: 'Premium Linen Blend',
+    care: 'Machine wash cold. Tumble dry low. Iron on medium heat if needed.',
     inStock: true
   },
   145: {
-    name: 'Straight Cut Trousers',
-    price: 4199,
+    name: 'Men\'s White Linen Trousers – Straight Fit Summer Pants',
+    price: 2999,
+    originalPrice: 4500,
     category: 'Trousers',
-    description: 'Clean straight-cut trousers with a mid-rise waist. Minimal design with a perfect drape. An essential for everyday smart dressing.',
-    colors: ['Beige', 'Stone', 'Light Grey'],
-    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
+    description: 'Upgrade your everyday wardrobe with our Men\'s White Linen Trousers, designed for men who appreciate comfort, versatility, and timeless style. Crafted from a lightweight linen-rich fabric, these trousers offer exceptional breathability, making them perfect for warm weather and all-day wear. The straight fit silhouette provides a clean drape while ensuring unrestricted movement and all-day comfort. Authentic Polo Ralph Lauren design inspiration. Premium lightweight linen fabric. Breathable and comfortable for warm weather. Straight fit silhouette for a modern look. Adjustable drawstring waistband for added comfort. Durable stitching and premium finishing. Versatile olive green color. Perfect with polo shirts and smart casual outfits.',
+    colors: ['White'],
+    sizes: ['S', 'M', 'L', 'XL'],
     images: [
-      'https://picsum.photos/seed/m1sc/600/800',
-      'https://picsum.photos/seed/m2sc/600/800',
-      'https://picsum.photos/seed/m3sc/600/800',
-      'https://picsum.photos/seed/m4sc/600/800'
+      'assets/images/White Linen 1.jpeg',
+      'assets/images/White Linen 1.jpeg',
     ],
-    material: '98% Cotton, 2% Elastane',
-    care: 'Machine wash cold. Iron on medium.',
+    material: 'Premium Linen Blend',
+    care: 'Machine wash cold. Tumble dry low. Iron on medium heat if needed.',
     inStock: true
   },
   146: {
     name: 'Double Pleat Dress',
     price: 5799,
+    originalPrice: 7200,
     category: 'Trousers',
     description: 'Premium dress trousers with double forward pleats for a classic tailored look. Flat front with a sharp crease for a polished finish.',
     colors: ['Black', 'Charcoal', 'Dark Navy'],
@@ -1108,7 +1103,6 @@ const productDetails = {
       'https://picsum.photos/seed/n1dp/600/800',
       'https://picsum.photos/seed/n2dp/600/800',
       'https://picsum.photos/seed/n3dp/600/800',
-      'https://picsum.photos/seed/n4dp/600/800'
     ],
     material: '100% Wool Gabardine',
     care: 'Dry clean only. Press with a cloth.',
@@ -1117,6 +1111,7 @@ const productDetails = {
   147: {
     name: 'Herringbone Trousers',
     price: 4699,
+    originalPrice: 5900,
     category: 'Trousers',
     description: 'Textured herringbone trousers that add visual interest to any outfit. Semi-slim fit with a mid-rise and slant pockets for a modern take on classic menswear.',
     colors: ['Grey Herringbone', 'Brown Herringbone', 'Black'],
@@ -1125,7 +1120,6 @@ const productDetails = {
       'https://picsum.photos/seed/o1hb/600/800',
       'https://picsum.photos/seed/o2hb/600/800',
       'https://picsum.photos/seed/o3hb/600/800',
-      'https://picsum.photos/seed/o4hb/600/800'
     ],
     material: '95% Wool, 5% Elastane Twill',
     care: 'Dry clean. Light steam for freshness.',
@@ -1134,6 +1128,7 @@ const productDetails = {
   148: {
     name: 'Cuffed Dress Trousers',
     price: 4399,
+    originalPrice: 5500,
     category: 'Trousers',
     description: 'Smart dress trousers finished with a clean cuff at the ankle. A refined detail that pairs perfectly with both Oxfords and sneakers.',
     colors: ['Navy', 'Charcoal', 'Khaki'],
@@ -1142,7 +1137,6 @@ const productDetails = {
       'https://picsum.photos/seed/p1ct/600/800',
       'https://picsum.photos/seed/p2ct/600/800',
       'https://picsum.photos/seed/p3ct/600/800',
-      'https://picsum.photos/seed/p4ct/600/800'
     ],
     material: '70% Wool, 30% Viscose Blend',
     care: 'Dry clean. Hang on hangers to maintain crease.',
@@ -1151,6 +1145,7 @@ const productDetails = {
   149: {
     name: 'High Waist Trousers',
     price: 5099,
+    originalPrice: 6400,
     category: 'Trousers',
     description: 'Fashion-forward high waist trousers with a relaxed wide leg. The extended waistband creates a flattering elongated silhouette.',
     colors: ['Black', 'Cream', 'Sage Green'],
@@ -1159,7 +1154,6 @@ const productDetails = {
       'https://picsum.photos/seed/q1hw/600/800',
       'https://picsum.photos/seed/q2hw/600/800',
       'https://picsum.photos/seed/q3hw/600/800',
-      'https://picsum.photos/seed/q4hw/600/800'
     ],
     material: '100% Viscose Crepe',
     care: 'Dry clean recommended. Do not tumble dry.',
@@ -1168,6 +1162,7 @@ const productDetails = {
   150: {
     name: 'Tapered Formal Trousers',
     price: 3999,
+    originalPrice: 5000,
     category: 'Trousers',
     description: 'Clean tapered formal trousers that bridge the gap between office and weekend. Slim through the leg with a slight taper at the ankle.',
     colors: ['Black', 'Mid Grey', 'Navy'],
@@ -1176,7 +1171,6 @@ const productDetails = {
       'https://picsum.photos/seed/r1ft/600/800',
       'https://picsum.photos/seed/r2ft/600/800',
       'https://picsum.photos/seed/r3ft/600/800',
-      'https://picsum.photos/seed/r4ft/600/800'
     ],
     material: '65% Polyester, 35% Wool Blend',
     care: 'Machine wash cold on gentle cycle. Iron on low.',
@@ -1185,6 +1179,7 @@ const productDetails = {
   151: {
     name: 'Flat Front Trousers',
     price: 3799,
+    originalPrice: 4700,
     category: 'Trousers',
     description: 'Minimal flat front trousers with no belt loops for a sleek streamlined look. Elasticated waistband for all-day comfort without sacrificing style.',
     colors: ['Black', 'Stone', 'Midnight'],
@@ -1193,7 +1188,6 @@ const productDetails = {
       'https://picsum.photos/seed/s1ff/600/800',
       'https://picsum.photos/seed/s2ff/600/800',
       'https://picsum.photos/seed/s3ff/600/800',
-      'https://picsum.photos/seed/s4ff/600/800'
     ],
     material: '95% Polyester, 5% Spandex',
     care: 'Machine wash cold. No ironing needed.',
@@ -1202,6 +1196,7 @@ const productDetails = {
   152: {
     name: 'Wool Blend Trousers',
     price: 6499,
+    originalPrice: 8100,
     category: 'Trousers',
     description: 'Premium wool blend trousers for the discerning dresser. Superfine merino blend with a luxurious hand feel and elegant drape.',
     colors: ['Charcoal', 'Navy', 'Coffee'],
@@ -1210,10 +1205,10 @@ const productDetails = {
       'https://picsum.photos/seed/t1wb/600/800',
       'https://picsum.photos/seed/t2wb/600/800',
       'https://picsum.photos/seed/t3wb/600/800',
-      'https://picsum.photos/seed/t4wb/600/800'
     ],
     material: '80% Merino Wool, 20% Silk',
     care: 'Dry clean only. Store on padded hangers.',
     inStock: true
   }
 };
+

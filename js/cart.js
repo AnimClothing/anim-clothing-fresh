@@ -216,6 +216,19 @@ function setupSharedSidebars() {
     wishlistOverlay.addEventListener('click', closeWishlistSidebar);
   }
 
+  // Checkout button redirect
+  const checkoutBtn = qs('.checkout-btn');
+  if (checkoutBtn) {
+    checkoutBtn.addEventListener('click', () => {
+      if (cart.length === 0) {
+        showToast('Your cart is empty!');
+        return;
+      }
+      closeCartSidebar();
+      window.location.href = 'checkout.html';
+    });
+  }
+
   function closeCartSidebar() {
     if (cartSidebar) cartSidebar.classList.remove('open');
     if (cartOverlay) cartOverlay.classList.remove('open');

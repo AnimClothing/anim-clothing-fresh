@@ -1363,7 +1363,8 @@ ul { list-style: none; }
 }
 
 @keyframes cardIn {
-  to { opacity: 1; transform: translateY(0); }
+  from { transform: translateY(30px); }
+  to { transform: translateY(0); }
 }
 
 @keyframes scrollLine {

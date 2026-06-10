@@ -64,7 +64,7 @@
   overflow: hidden;
   border: 1px solid rgba(255,255,255,.04);
   transition: transform .5s var(--ease-out), box-shadow .5s ease, border-color .3s ease;
-  opacity: 0;
+  opacity: 1;
   animation: cardIn .5s var(--ease-out) forwards;
 }
 
@@ -146,6 +146,14 @@
   font-weight: 700;
   color: var(--accent);
   margin-bottom: 14px;
+}
+
+.collection-card-price .original-price {
+  text-decoration: line-through;
+  color: var(--text-muted);
+  font-weight: 400;
+  font-size: 0.9rem;
+  margin-right: 6px;
 }
 
 .collection-card-actions {
@@ -291,16 +299,6 @@
   cursor: not-allowed !important;
   opacity: .7;
   pointer-events: none;
-}
-
-/* --- Shopify Buy Button wrapper --- */
-.shopify-card-wrapper {
-  min-height: 420px;
-}
-
-.shopify-card-wrapper .collection-card:hover {
-  transform: none;
-  box-shadow: none;
 }
 
 /* --- Responsive --- */

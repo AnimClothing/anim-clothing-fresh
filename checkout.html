@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ANIM CLOTHING — Checkout</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/checkout.css" />
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1476555017252891');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1476555017252891&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+</head>
+<body>
+
+  <!-- Announcement Bar -->
+  <div class="announcement-bar">
+    <div class="announcement-content">
+      <span class="announcement-text">Free Delivery All Across Pakistan</span>
+      <span class="announcement-emoji">ðŸšš</span>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="logo">ANIM CLOTHING</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="icon-btn" id="cartToggle" aria-label="Cart">
+          <i class="fas fa-shopping-bag"></i>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Checkout Section -->
+  <section class="checkout-section">
+    <div class="container">
+      <div class="checkout-header">
+        <h1>Checkout</h1>
+        <p>Review your order and fill in your details</p>
+      </div>
+
+      <div class="checkout-layout" id="checkoutLayout">
+        <!-- Order Summary -->
+        <div class="checkout-summary">
+          <h2>Order Summary</h2>
+          <div class="checkout-items" id="checkoutItems">
+            <!-- Rendered by JS -->
+          </div>
+          <div class="checkout-total">
+            <div class="checkout-total-row">
+              <span>Subtotal</span>
+              <span id="checkoutSubtotal">Rs. 0</span>
+            </div>
+            <div class="checkout-total-row">
+              <span>Shipping</span>
+              <span>Free</span>
+            </div>
+            <div class="checkout-total-row checkout-total-final">
+              <span>Total</span>
+              <span id="checkoutTotal">Rs. 0</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Customer Details Form -->
+        <div class="checkout-form">
+          <h2>Delivery Details</h2>
+          <form id="checkoutForm" novalidate>
+            <div class="form-group">
+              <label for="custName">Full Name <span class="required">*</span></label>
+              <input type="text" id="custName" required placeholder="e.g. Ali Khan" />
+            </div>
+            <div class="form-group">
+              <label for="custPhone">Phone Number <span class="required">*</span></label>
+              <input type="tel" id="custPhone" required placeholder="e.g. 0321-1234567" />
+            </div>
+            <div class="form-group">
+              <label for="custCity">City <span class="required">*</span></label>
+              <input type="text" id="custCity" required placeholder="e.g. Lahore" />
+            </div>
+            <div class="form-group">
+              <label for="custAddress">Delivery Address <span class="required">*</span></label>
+              <textarea id="custAddress" required placeholder="House/Building, Street, Area" rows="3"></textarea>
+            </div>
+            <div class="form-group">
+              <label for="custNotes">Order Notes (optional)</label>
+              <textarea id="custNotes" placeholder="Any special instructions?" rows="2"></textarea>
+            </div>
+
+            <div class="form-group payment-info">
+              <p><i class="fas fa-truck"></i> Cash on Delivery (COD)</p>
+              <p class="payment-sub">Pay when you receive your order. No online payment needed.</p>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-place-order" id="placeOrderBtn">
+              <i class="fas fa-check"></i> Place Order
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Confirmation State -->
+      <div class="checkout-confirmation" id="checkoutConfirmation" style="display:none;">
+        <div class="confirmation-box">
+          <div class="confirmation-icon"><i class="fas fa-check-circle"></i></div>
+          <h2>Order Placed Successfully!</h2>
+          <p class="confirmation-order-id">Order ID: <strong id="confirmOrderId">ANIM-XXXX</strong></p>
+          <p>We'll contact you at your provided phone number to confirm your order.</p>
+          <div class="confirmation-actions">
+            <a href="https://wa.me/923211156808" class="btn btn-primary" target="_blank">
+              <i class="fab fa-whatsapp"></i> Contact Us on WhatsApp
+            </a>
+            <a href="index.html" class="btn btn-outline">Continue Shopping</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">ANIM CLOTHING</a>
+          <p>Defining streetwear culture, one stitch at a time.</p>
+          <div class="footer-social">
+            <a href="https://www.instagram.com/animclothing.official/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/AnimClothing.Offical" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Shop</h4>
+          <a href="oversized-tees.html">Tees</a>
+          <a href="polo-shirts.html">Polo Shirts</a>
+          <a href="denim-shirts.html">Denim Shirts</a>
+          <a href="formal-shirts.html">Formal Shirts</a>
+          <a href="cargo-pants.html">Cargo Pants</a>
+          <a href="denim-jeans.html">Denim Jeans</a>
+          <a href="trousers.html">Trousers</a>
+        </div>
+        <div class="footer-col">
+          <h4>Support</h4>
+          <a href="index.html#shipping">Shipping</a>
+          <a href="index.html#returns">Returns</a>
+          <a href="#">Size Guide</a>
+          <a href="#">Contact</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 ANIM CLOTHING. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Cart Sidebar -->
+  <div class="cart-sidebar" id="cartSidebar">
+    <div class="cart-header">
+      <h3>Your Cart <span id="cartItemCount">(0)</span></h3>
+      <button id="cartClose" aria-label="Close cart"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <div class="cart-empty">
+        <i class="fas fa-shopping-bag"></i>
+        <p>Your bag is empty</p>
+      </div>
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Total</span>
+        <span id="cartTotal">Rs. 0</span>
+      </div>
+      <button class="btn btn-primary checkout-btn">Checkout</button>
+    </div>
+  </div>
+  <div class="cart-overlay" id="cartOverlay"></div>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast">
+    <i class="fas fa-check-circle"></i>
+    <span id="toastMessage">Item added to cart!</span>
+  </div>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/923211156808?text=Hello%2C%20I%20am%20interested%20in%20your%20clothing%20collection" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <script src="js/data.js?v=13"></script>
+  <script src="js/cart.js?v=13"></script>
+  <script src="js/checkout.js?v=13"></script>
+</body>
+</html>

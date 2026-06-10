@@ -5,16 +5,6 @@
 let currentModalImage = 0;
 let currentModalId = null;
 
-function stringHash(str) {
-  let hash = 0;
-  for (let i = 0; i < str.length; i++) {
-    const char = str.charCodeAt(i);
-    hash = ((hash << 5) - hash) + char;
-    hash |= 0;
-  }
-  return Math.abs(hash);
-}
-
 function openModal(id) {
   const detail = productDetails[id];
   if (!detail) return;
@@ -32,7 +22,9 @@ function openModal(id) {
   // Title
   title.textContent = detail.name;
   category.textContent = detail.category;
-  price.textContent = `Rs. ${detail.price.toLocaleString('en-PK')}`;
+  price.innerHTML = detail.originalPrice
+    ? `<span class="original-price">Rs. ${detail.originalPrice.toLocaleString('en-PK')}</span> Rs. ${detail.price.toLocaleString('en-PK')}`
+    : `Rs. ${detail.price.toLocaleString('en-PK')}`;
   desc.textContent = detail.description;
 
   // Stock
@@ -48,8 +40,10 @@ function openModal(id) {
   mainImg.src = detail.images[0];
   mainImg.alt = detail.name;
   mainImg.onerror = function() {
+    const p = this.parentElement;
+    if (p.querySelector('.modal-image-placeholder')) return;
     this.style.display = 'none';
-    this.parentElement.insertAdjacentHTML('beforeend',
+    p.insertAdjacentHTML('beforeend',
       `<div class="modal-image-placeholder"><i class="fas fa-${getIconForCategory(detail.category)}"></i></div>`);
   };
   imagesContainer.appendChild(mainImg);
@@ -59,37 +53,6 @@ function openModal(id) {
     <button class="modal-image-nav prev" onclick="modalPrevImage()"><i class="fas fa-chevron-left"></i></button>
     <button class="modal-image-nav next" onclick="modalNextImage()"><i class="fas fa-chevron-right"></i></button>
   `);
-
-  // Thumbnails
-  let thumbsContainer = document.getElementById('modalThumbnails');
-  if (!thumbsContainer) {
-    thumbsContainer = document.createElement('div');
-    thumbsContainer.id = 'modalThumbnails';
-    thumbsContainer.className = 'modal-thumbnails';
-    imagesContainer.parentElement.appendChild(thumbsContainer);
-  }
-  thumbsContainer.innerHTML = detail.images.map((img, i) =>
-    `<div class="modal-thumb ${i === 0 ? 'active' : ''}" onclick="modalGoToImage(${i})">
-       <img src="${img}" alt="" style="width:100%;height:100%;object-fit:cover;border-radius:6px;" onerror="this.style.display='none';this.parentElement.innerHTML='<i class=&quot;fas fa-image&quot; style=&quot;font-size:1.2rem&quot;></i>'">
-     </div>`
-  ).join('');
-
-  // Colors
-  const colorsContainer = document.getElementById('modalColors');
-  if (colorsContainer) {
-    colorsContainer.innerHTML = '<label>Color</label><div class="color-options">' +
-      detail.colors.map((c, i) => {
-        // Generate a hash-based color per name
-        const hue = stringHash(c) % 360;
-        return `<div class="color-group">
-          <div class="color-option ${i === 0 ? 'selected' : ''}"
-               style="background:hsl(${hue},40%,40%)"
-               title="${c}"
-               onclick="selectColor(this, '${c.replace(/'/g, "\\'")}')"></div>
-          <span class="color-label">${c}</span>
-        </div>`;
-      }).join('') + '</div>';
-  }
 
   // Sizes
   const sizesContainer = document.getElementById('modalSizes');
@@ -174,43 +137,61 @@ function closeModal() {
 }
 
 // Navigation
+let modalAnimating = false;
+
 function modalNextImage() {
+  if (modalAnimating) return;
   const detail = productDetails[currentModalId];
   if (!detail) return;
   currentModalImage = (currentModalImage + 1) % detail.images.length;
-  updateModalImage();
+  updateModalImage(1);
 }
 
 function modalPrevImage() {
+  if (modalAnimating) return;
   const detail = productDetails[currentModalId];
   if (!detail) return;
   currentModalImage = (currentModalImage - 1 + detail.images.length) % detail.images.length;
-  updateModalImage();
+  updateModalImage(-1);
 }
 
-function modalGoToImage(i) {
-  currentModalImage = i;
-  updateModalImage();
-}
-
-function updateModalImage() {
+function updateModalImage(dir) {
   const detail = productDetails[currentModalId];
   if (!detail) return;
 
-  const main = document.querySelector('.modal-image-main');
-  if (main) {
-    main.src = detail.images[currentModalImage];
-    main.alt = detail.name;
+  const container = document.getElementById('modalImages');
+  if (!container) return;
+  container.querySelectorAll('.modal-image-placeholder').forEach(el => el.remove());
+
+  let oldImg = container.querySelector('.modal-image-main');
+
+  if (!dir || !oldImg) {
+    if (oldImg) {
+      oldImg.src = detail.images[currentModalImage];
+      oldImg.alt = detail.name;
+    }
+    return;
   }
 
-  const thumbs = document.querySelectorAll('.modal-thumb');
-  thumbs.forEach((t, i) => t.classList.toggle('active', i === currentModalImage));
-}
+  modalAnimating = true;
 
-function selectColor(el, colorName) {
-  document.querySelectorAll('.color-option').forEach(c => c.classList.remove('selected'));
-  if (el) el.classList.add('selected');
-  // In a real app, this would change the product image set
+  const newImg = oldImg.cloneNode();
+  newImg.src = detail.images[currentModalImage];
+  newImg.alt = detail.name;
+
+  newImg.onload = function() {
+    newImg.style.animation = dir === 1 ? 'slideInRight 0.3s ease' : 'slideInLeft 0.3s ease';
+    container.insertBefore(newImg, oldImg);
+    oldImg.style.animation = dir === 1 ? 'slideOutLeft 0.3s ease' : 'slideOutRight 0.3s ease';
+
+    const cleanup = function() {
+      if (oldImg && oldImg.parentNode) oldImg.remove();
+      modalAnimating = false;
+    };
+    oldImg.addEventListener('animationend', cleanup, { once: true });
+  };
+
+  if (newImg.complete) newImg.onload();
 }
 
 function selectSize(el, size) {
@@ -226,7 +207,7 @@ function selectSize(el, size) {
 
 function getIconForCategory(cat) {
   const map = {
-    'Oversized Tees': 'tshirt',
+    'Tees': 'tshirt',
     'Polo Shirts': 'gem',
     'Denim Shirts': 'jacket',
     'Formal Shirts': 'briefcase',
